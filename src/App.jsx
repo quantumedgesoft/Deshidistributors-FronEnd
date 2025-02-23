@@ -1,12 +1,16 @@
-import React from 'react'
-import Home from './pages/home/Home'
+import React from "react";
+import { Outlet } from "react-router";
 
 const App = () => {
   return (
     <>
-    <Home/>
-    </>
-  )
-}
+      navbar
 
-export default App
+      <Outlet/>
+
+      footer
+    </>
+  );
+};
+
+export default App;

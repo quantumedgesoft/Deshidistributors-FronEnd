@@ -1,12 +1,9 @@
-import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
+import React from "react";
 
 const Home = () => {
-  return (
-    <>
-    <Navbar/>
-    </>
-  )
-}
+  return <div style={{ marginTop: "200px", backgroundColor: "red" }}>
+    Heloolkhzfgdkjnbfgnjnlkkljklkl
+  </div>;
+};
 
-export default Home
+export default Home;
