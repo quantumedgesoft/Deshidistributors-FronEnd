@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router"
 
 const Navbar = () => {
     
@@ -20,15 +20,15 @@ const Navbar = () => {
             </div>
             <div className="container px-0">
                 <nav className="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" className="navbar-brand"><h1 className="text-primary display-6">Fruitables</h1></a>
+                    <Link to="/" className="navbar-brand"><h1 className="text-primary display-6">Fruitables</h1></Link>
                     <button className="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="fa fa-bars text-primary"></span>
                     </button>
                     <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div className="navbar-nav mx-auto">
-                            <a href="index.html" className="nav-item nav-link active">Home</a>
-                            <a href="shop.html" className="nav-item nav-link">Shop</a>
-                            <a href="shop-detail.html" className="nav-item nav-link">Shop Detail</a>
+                            <Link to="/" className="nav-item nav-link active">Home</Link>
+                            <Link to="/about" className="nav-item nav-link">About</Link>
+                            <Link to="/shop" className="nav-item nav-link">Shop</Link>
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu m-0 bg-secondary rounded-0">
@@ -38,7 +38,7 @@ const Navbar = () => {
                                     <a href="404.html" className="dropdown-item">404 Page</a>
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link">Contact</a>
+                            <Link to="/contact" className="nav-item nav-link">Contact</Link>
                         </div>
                         <div className="d-flex m-3 me-0">
                             <button className="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search text-primary"></i></button>
