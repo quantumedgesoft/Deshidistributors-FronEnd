@@ -1,5 +1,6 @@
-const HeroSection = () => {
+import HeroSlider from "../../components/sliders/HeroSlider";
 
+const HeroSection = () => {
   return (
     <section className="container-fluid py-5 mb-5 hero-header">
       <div className="container py-5">
@@ -18,7 +19,7 @@ const HeroSection = () => {
               <button
                 type="submit"
                 className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100"
-                style={{top: "0", right: "25%"}}
+                style={{ top: "0", right: "25%" }}
               >
                 Submit Now
               </button>
@@ -31,7 +32,7 @@ const HeroSection = () => {
               data-bs-ride="carousel"
             >
               <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active rounded">
+                {/* <div className="carousel-item active rounded">
                   <img
                     src="/src/assets/img/hero-img-1.png"
                     className="img-fluid w-100 h-100 bg-secondary rounded"
@@ -41,6 +42,7 @@ const HeroSection = () => {
                     Fruites
                   </a>
                 </div>
+
                 <div className="carousel-item rounded">
                   <img
                     src="/src/assets/img/hero-img-2.jpg"
@@ -50,7 +52,8 @@ const HeroSection = () => {
                   <a href="#" className="btn px-4 py-2 text-white rounded">
                     Vesitables
                   </a>
-                </div>
+                </div> */}
+                <HeroSlider />
               </div>
               <button
                 className="carousel-control-prev"
