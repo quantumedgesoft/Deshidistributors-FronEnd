@@ -1,8 +1,11 @@
 import React from 'react'
+import Home from './pages/home/Home'
 
 const App = () => {
   return (
-    <div className='text-center'>Hi, Welcomme Deshidistributors</div>
+    <>
+    <Home/>
+    </>
   )
 }
 
