@@ -1,8 +1,11 @@
 import React from 'react'
+import PageRouteBanner from '../../components/shared/pageRouteBanner/PageRouteBanner'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <PageRouteBanner PageName={"About"}/>
+    </div>
   )
 }
 
