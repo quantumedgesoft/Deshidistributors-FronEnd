@@ -1,16 +1,8 @@
 import React from "react";
-import { Outlet } from "react-router";
+import PrimaryLayout from "./components/layout/PrimaryLayout";
 
 const App = () => {
-  return (
-    <>
-      navbar
-
-      <Outlet/>
-
-      footer
-    </>
-  );
+  return <PrimaryLayout />;
 };
 
 export default App;
