@@ -4,7 +4,7 @@ import PageRouteBanner from '../../components/shared/pageRouteBanner/PageRouteBa
 const About = () => {
   return (
     <div>
-      <PageRouteBanner PageName={"About"}/>
+      <PageRouteBanner PageName="About"/>
     </div>
   )
 }
