@@ -319,11 +319,6 @@
 /*** Fruits End ***/
 
 /*** vesitable Start ***/
-
-.vesitable {
-  border: 5px solid red;
-}
-
 .vesitable .vesitable-item {
   height: 100%;
   transition: 0.5s;
@@ -495,13 +490,12 @@
 
 /* Swiper Slider*/
 
-.HeroSlider .swiper-button-prev:after,
+.HeroSlider .swiper-button-prev,
 .HeroSlider .swiper-button-next {
   border: 1px solid white;
   background-color: #81c408;
-  padding: 10px;
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
   border-radius: 50%;
   color: white;
 }
@@ -509,4 +503,7 @@
 .HeroSlider .swiper-button-prev:after,
 .HeroSlider .swiper-button-next:after {
   font-size: 22px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
