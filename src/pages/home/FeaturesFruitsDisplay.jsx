@@ -1,5 +1,5 @@
 
-const FeaturesCategoryDisplay = () => {
+const FeaturesFruitsDisplay = () => {
   return (
     <div className="container-fluid service py-5">
     <div className="container py-5">
@@ -49,4 +49,4 @@ const FeaturesCategoryDisplay = () => {
   )
 }
 
-export default FeaturesCategoryDisplay
+export default FeaturesFruitsDisplay
