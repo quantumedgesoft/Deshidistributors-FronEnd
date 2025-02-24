@@ -1,5 +1,6 @@
 import React from "react";
-
+import logo from '../../../assets/Images/deshidistributors_logo.png'
+import { Link } from "react-router";
 const Footer = () => {
   return (
     <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
@@ -11,8 +12,7 @@ const Footer = () => {
           <div className="row g-4">
             <div className="col-lg-3">
               <a href="#">
-                <h1 className="text-primary mb-0">Fruitables</h1>
-                <p className="text-secondary mb-0">Fresh products</p>
+                  <img className="w-50" src={logo} alt="" />
               </a>
             </div>
             <div className="col-lg-6">
@@ -65,72 +65,56 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
               <h4 className="text-light mb-3">Why People Like us!</h4>
-              <p className="mb-4">
-                typesetting, remaining essentially unchanged. It was popularised
-                in the 1960s with the like Aldus PageMaker including of Lorem
-                Ipsum.
+              <p className="mb-4">rusted quality, authentic products, and seamless service Deshi Distributors brings you the best of Asia with reliability and passion!
               </p>
-              <a
-                href=""
-                className="btn border-secondary py-2 px-4 rounded-pill text-primary"
-              >
-                Read More
-              </a>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="d-flex flex-column text-start footer-item">
-              <h4 className="text-light mb-3">Shop Info</h4>
-              <a className="btn-link" href="">
+              <h4 className="text-light mb-3">Info</h4>
+              <Link className="btn-link" to="">
                 About Us
-              </a>
-              <a className="btn-link" href="">
-                Contact Us
-              </a>
-              <a className="btn-link" href="">
+              </Link>
+              <Link className="btn-link" to="">
                 Privacy Policy
-              </a>
-              <a className="btn-link" href="">
+              </Link>
+              <Link className="btn-link" to="">
                 Terms & Condition
-              </a>
-              <a className="btn-link" href="">
+              </Link>
+              <Link className="btn-link" to="">
                 Return Policy
-              </a>
-              <a className="btn-link" href="">
+              </Link>
+              <Link className="btn-link" to="">
                 FAQs & Help
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="d-flex flex-column text-start footer-item">
-              <h4 className="text-light mb-3">Account</h4>
-              <a className="btn-link" href="">
-                My Account
-              </a>
-              <a className="btn-link" href="">
-                Shop details
-              </a>
-              <a className="btn-link" href="">
-                Shopping Cart
-              </a>
-              <a className="btn-link" href="">
-                Wishlist
-              </a>
-              <a className="btn-link" href="">
-                Order History
-              </a>
-              <a className="btn-link" href="">
-                International Orders
-              </a>
+              <h4 className="text-light mb-3">Popular Service</h4>
+              <Link className="btn-link" to="">
+              Rice
+              </Link>
+              <Link className="btn-link" to="">
+              Spices & Herbs
+              </Link>
+              <Link className="btn-link" to="">
+              Tea, Coffee, Milk Drinks
+              </Link>
+              <Link className="btn-link" to="">
+              Healthcare & Beauty
+              </Link>
+              <Link className="btn-link" to="">
+              Miscellaneous
+              </Link>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
               <h4 className="text-light mb-3">Contact</h4>
-              <p>Address: 1429 Netus Rd, NY 48247</p>
-              <p>Email: Example@gmail.com</p>
+              <p>Address: 123 Street, New York</p>
+              <p>Email:info@Deshidistributors.com</p>
               <p>Phone: +0123 4567 8910</p>
-              <p>Payment Accepted</p>
               <img src="img/payment.png" className="img-fluid" alt="" />
             </div>
           </div>
