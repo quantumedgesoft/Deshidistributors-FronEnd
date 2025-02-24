@@ -1,20 +1,65 @@
 import { Link } from "react-router";
 import Topbar from "./Topbar";
-import logo from '../../assets/Images/deshidistributors_logo.png'
+import logo from "../../assets/Images/deshidistributors_logo.png";
 const Navbar = () => {
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  // Tea, Coffee, Milk Drinks
+  // Honey
+  // Sauce
+  // Biscuit
+  // Dates
+  // Chanachur
+  // Noodles
+  // Ghee
+  // Salt
+  // Sugar
+  // Spices &amp; Herb
+  // Nuts
+  // Edible Oil
+  // Flour
+  // Daal
+  // Rice
+
+  const categories = [
+    "Snacks",
+    "Pickle",
+    "Miscellaneous",
+    "Soap",
+    "Healthcare & Beauty",
+    "Paan",
+    "Candy",
+    "Tea, Coffee, Milk Drinks",
+    "Honey",
+    "Sauce",
+    "Biscuit",
+    "Dates",
+    "Chanachur",
+    "Noodles",
+    "Ghee",
+    "Salt",
+    "Sugar",
+    "Spices & Herb",
+    "Nuts",
+    "Edible Oil",
+    "Flour",
+    "Daal",
+    "Rice",
+  ];
+
   return (
     <>
       <div className="container-fluid fixed-top">
-        <Topbar/>
+        <Topbar />
         <div className="container px-0">
           <nav className="navbar navbar-light bg-white navbar-expand-xl">
             <Link to="/" className="navbar-brand">
-              <img
-                src={logo}
-                alt=""
-                className=""
-                style={{ width: "150px" }}
-              />
+              <img src={logo} alt="" className="" style={{ width: "150px" }} />
             </Link>
             <button
               className="navbar-toggler py-2 px-3"
@@ -26,7 +71,7 @@ const Navbar = () => {
             </button>
             <div
               className="collapse navbar-collapse bg-white"
-              id="navbarCollapse"
+              id="navbarCollapse" style={{position: "relative"}}
             >
               <div className="navbar-nav mx-auto">
                 <Link to="/" className="nav-item nav-link active">
@@ -35,34 +80,31 @@ const Navbar = () => {
                 <Link to="/about" className="nav-item nav-link">
                   About
                 </Link>
-                <Link to="/shop" className="nav-item nav-link">
-                  Shop
-                </Link>
-                <div className="nav-item dropdown">
-                  <a
+
+                <div className="nav-item">
+                  <Link
                     href="#"
                     className="nav-link dropdown-toggle"
                     data-bs-toggle="dropdown"
                   >
                     Products
-                  </a>
+                  </Link>
+
                   <div className="dropdown-menu m-0 bg-secondary rounded-0">
-                    <a href="cart.html" className="dropdown-item">
-                      Cart
-                    </a>
-                    <a href="chackout.html" className="dropdown-item">
-                      Chackout
-                    </a>
-                    <a href="testimonial.html" className="dropdown-item">
-                      Testimonial
-                    </a>
-                    <a href="404.html" className="dropdown-item">
-                      404 Page
-                    </a>
+                    {categories.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        href="cart.html"
+                        className="dropdown-item"
+                      >
+                        {item}
+                      </Link>
+                    ))}
                   </div>
                 </div>
+
                 <Link to="/contact" className="nav-item nav-link">
-                  Contact
+                  Operation Map
                 </Link>
               </div>
 
