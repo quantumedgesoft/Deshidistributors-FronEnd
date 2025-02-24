@@ -245,20 +245,20 @@
 /*** featurs Start ***/
 .featurs .featurs-item .featurs-icon {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
 }
 
 .featurs .featurs-item .featurs-icon::after {
   content: "";
-  width: 35px;
-  height: 35px;
-  background: var(--bs-secondary);
+  width: 25px;
+  height: 25px;
+  background: var(--bs-primary);
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   transform: translate(-50%);
   transform: rotate(45deg);
-  background: var(--bs-secondary);
+  background: var(--bs-primary);
 }
 /*** featurs End ***/
 
@@ -276,7 +276,7 @@
 
 /*** Fruits Start ***/
 .fruite .tab-class .nav-item a.active {
-  background: var(--bs-secondary) !important;
+  background: var(--bs-primary) !important;
 }
 
 .fruite .tab-class .nav-item a.active span {
@@ -493,7 +493,7 @@
 .HeroSlider .swiper-button-prev,
 .HeroSlider .swiper-button-next {
   border: 1px solid white;
-  background-color: #81c408;
+  background-color: orange;
   width: 35px !important;
   height: 35px !important;
   border-radius: 50%;

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Topbar = () => {
   return (
@@ -6,7 +5,7 @@ const Topbar = () => {
           <div className="d-flex justify-content-between">
             <div className="top-info ps-2">
               <small className="me-3">
-                <i className="fas fa-map-marker-alt me-2 text-white"></i>{" "}
+                <i className="fas fa-map-marker-alt me-2 text-white"></i>
                 <a href="#" className="text-white">
                   123 Street, New York
                 </a>
