@@ -2,30 +2,7 @@ import { Link } from "react-router";
 import Topbar from "./Topbar";
 import logo from "../../assets/Images/deshidistributors_logo.png";
 const Navbar = () => {
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  // Tea, Coffee, Milk Drinks
-  // Honey
-  // Sauce
-  // Biscuit
-  // Dates
-  // Chanachur
-  // Noodles
-  // Ghee
-  // Salt
-  // Sugar
-  // Spices &amp; Herb
-  // Nuts
-  // Edible Oil
-  // Flour
-  // Daal
-  // Rice
-
+  
   const categories = [
     "Snacks",
     "Pickle",
@@ -110,14 +87,6 @@ const Navbar = () => {
               </div>
 
               <div className="d-flex m-3 me-0">
-                {/* <button
-                  type="submit"
-                  className="btn-primary border-0 py-2 px-5  rounded-pill text-white"
-                  style={{ top: "0", right: "25%" }}
-                >
-                  Contact
-                </button> */}
-
                 <button
                   type="submit"
                   className="btn btn-primary border-0 border-secondary py-2 px-5 position-absolute rounded-pill text-white"

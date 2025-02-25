@@ -1,8 +1,8 @@
-import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="container py-5 bg-gradient-to-b">
+
+    <div className="container py-5 bg-gradient-to-b" style={{marginTop: "150px"}}>
       <div className="max-w-4xl mx-auto bg-white p-10 shadow-2xl rounded-2xl">
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-4">Privacy Policy</h1>
         <p className="text-md text-gray-600 text-center mb-6">Last updated: February 2025</p>
@@ -67,7 +67,9 @@ const PrivacyPolicy = () => {
         ))}
       </div>
     </div>
+    
   );
 };
 
 export default PrivacyPolicy;
+

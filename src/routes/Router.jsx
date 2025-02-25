@@ -4,7 +4,7 @@ import Home from "../pages/home/Home";
 import App from "../App"
 import Contact from "../pages/contact/Contact";
 import Shop from "../pages/shop/Shop";
-import PrivacyPolicy from "../pages/privacyPolicy/PrivacyPolicy";
+import PrivacyAndPolicy from "../pages/privacy_policy/PrivacyAndPolicy";
 
 const Router = () => {
   return (
@@ -14,7 +14,7 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/privacy-Policy" element={<PrivacyPolicy/>} />
+        <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
       </Route>
     </Routes>
   );
