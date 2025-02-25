@@ -9,52 +9,52 @@ export default function HeroSlider() {
     {
       id: 1,
       title: "Rice",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider1.jpg",
     },
     {
       id: 2,
       title: "Daal",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider2.jpg",
     },
     {
       id: 3,
       title: "Flour",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider3.jpg",
     },
     {
       id: 4,
       title: "Edible Oil",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider4.jpg",
     },
     {
       id: 5,
       title: "Nuts",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider5.jpg",
     },
     {
       id: 6,
       title: "Spices & Herbs",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider6.jpg",
     },
     {
       id: 7,
       title: "Sugar",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider7.jpg",
     },
     {
       id: 8,
       title: "Salt",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider8.jpg",
     },
     {
       id: 9,
       title: "Ghee",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider9.jpg",
     },
     {
       id: 10,
       title: "Pickle",
-      img: "/src/assets/prodducts/IMG-20250220-WA0272.jpg",
+      img: "/img/slider/slider10.jpg",
     },
   ];
 
@@ -75,7 +75,10 @@ export default function HeroSlider() {
       >
         {sliderContent.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="carousel-item active rounded">
+            <div
+              className="active rounded overflow-hidden"
+              style={{ maxHeight: "280px" }}
+            >
               <img
                 src={item.img}
                 className="img-fluid w-100 h-100 bg-secondary rounded"
@@ -84,52 +87,18 @@ export default function HeroSlider() {
               <a
                 href="#"
                 className="btn px-4 py-2 text-white rounded bg-primary"
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  translate: "-50% -50%",
+                }}
               >
                 {item.title}
               </a>
             </div>
           </SwiperSlide>
         ))}
-
-        {/* <SwiperSlide>
-          <div className="carousel-item active rounded">
-            <img
-              src="/src/assets/img/hero-img-1.png"
-              className="img-fluid w-100 h-100 bg-secondary rounded"
-              alt="First slide"
-            />
-            <a href="#" className="btn px-4 py-2 text-white rounded">
-              Dhaal
-            </a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="carousel-item active rounded">
-            <img
-              src="/src/assets/img/hero-img-1.png"
-              className="img-fluid w-100 h-100 bg-secondary rounded"
-              alt="First slide"
-            />
-            <a href="#" className="btn px-4 py-2 text-white rounded">
-              Flour
-            </a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="carousel-item active rounded">
-            <img
-              src="/src/assets/img/hero-img-1.png"
-              className="img-fluid w-100 h-100 bg-secondary rounded"
-              alt="First slide"
-            />
-            <a href="#" className="btn px-4 py-2 text-white rounded">
-              Fruites
-            </a>
-          </div>
-        </SwiperSlide>
-         */}
       </Swiper>
     </>
   );
