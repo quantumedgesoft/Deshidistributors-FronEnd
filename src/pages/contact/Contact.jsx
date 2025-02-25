@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <div>
-      <PageRouteBanner title="Contact" />
+      <PageRouteBanner PageName="Contact" />
       <div className="container-fluid contact py-5">
         <div className="container py-5">
           <div className="p-5 bg-light rounded">
@@ -24,7 +24,7 @@ const Contact = () => {
               {/* Office Location */}
               <div className="col-12">
                 <div className="text-center mx-auto" style={{ maxWidth: "700px" }}>
-                  <h1 className="text-primary">Office Location</h1>
+                  <h1 className="fw-bold">Office Location</h1>
                   <p className="mb-4">Denver, Colorado, USA</p>
                 </div>
               </div>
