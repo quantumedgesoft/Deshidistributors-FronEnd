@@ -7,10 +7,10 @@ const FeaturesFruitsDisplay = () => {
             <div className="col-md-6 col-lg-4">
                 <a href="#">
                     <div className="service-item bg-secondary rounded border border-secondary">
-                        <img src="/src/assets/img/featur-1.jpg" className="img-fluid rounded-top w-100" alt=""/>
+                        <img src="/img/products/Honey.png" className="img-fluid rounded-top w-100" style={{maxHeight: "325px"}} alt=""/>
                         <div className="px-4 rounded-bottom">
                             <div className="service-content bg-primary text-center p-4 rounded">
-                                <h5 className="text-white">Fresh Apples</h5>
+                                <h5 className="text-white">Fresh Honey</h5>
                                 <h3 className="mb-0">20% OFF</h3>
                             </div>
                         </div>
@@ -20,11 +20,11 @@ const FeaturesFruitsDisplay = () => {
             <div className="col-md-6 col-lg-4">
                 <a href="#">
                     <div className="service-item bg-dark rounded border border-dark">
-                        <img src="/src/assets/img/featur-2.jpg" className="img-fluid rounded-top w-100" alt=""/>
+                        <img src="/img/products/Dates.png" className="img-fluid rounded-top w-100" style={{maxHeight: "325px"}} alt=""/>
                         <div className="px-4 rounded-bottom">
                             <div className="service-content bg-light text-center p-4 rounded">
-                                <h5 className="text-primary">Tasty Fruits</h5>
-                                <h3 className="mb-0">Free delivery</h3>
+                                <h5 className="text-primary">Tasty Dates</h5>
+                                <h3 className="mb-0">10% OFF</h3>
                             </div>
                         </div>
                     </div>
@@ -33,11 +33,11 @@ const FeaturesFruitsDisplay = () => {
             <div className="col-md-6 col-lg-4">
                 <a href="#">
                     <div className="service-item bg-primary rounded border border-primary">
-                        <img src="/src/assets/img/featur-3.jpg" className="img-fluid rounded-top w-100" alt=""/>
+                        <img src="/img/products/Spices & Herbs.png" className="img-fluid rounded-top w-100" style={{maxHeight: "325px", minHeight: "325px"}} alt=""/>
                         <div className="px-4 rounded-bottom">
                             <div className="service-content bg-secondary text-center p-4 rounded">
-                                <h5 className="text-white">Exotic Vegitable</h5>
-                                <h3 className="mb-0">Discount 30$</h3>
+                                <h5 className="text-white">Spices & Herbs</h5>
+                                <h3 className="mb-0">Discount 3$</h3>
                             </div>
                         </div>
                     </div>
