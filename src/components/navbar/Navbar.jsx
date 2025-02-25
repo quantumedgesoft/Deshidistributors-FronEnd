@@ -84,7 +84,7 @@ const Navbar = () => {
 
                 <div className="nav-item">
                   <Link
-                    href="#"
+                    href="/"
                     className="nav-link dropdown-toggle"
                     data-bs-toggle="dropdown"
                   >

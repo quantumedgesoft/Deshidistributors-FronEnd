@@ -1,44 +1,75 @@
 import { useState } from "react";
-import OrganicTomato from "/src/assets/img/best-product-1.jpg";
+import Ovaltine from "/src/assets/prodducts/IMG-20250220-WA0320.jpg";
+import Zafran from "/src/assets/prodducts/IMG-20250220-WA0276.jpg";
+import BasilSeed from "/src/assets/prodducts/IMG-20250220-WA0281.jpg";
+import SunFlowerOil from "/src/assets/prodducts/IMG-20250220-WA0308.jpg";
+import HealthySoups from "/src/assets/prodducts/IMG-20250220-WA0332.jpg";
+import Linkgo from "/src/assets/prodducts/IMG-20250220-WA0333.jpg";
+import DryBean from "/src/assets/prodducts/IMG-20250220-WA0335.jpg";
+import ElachiRusk from "/src/assets/prodducts/slider9.jpg";
 
-const BestselleProducts = () => {
+const BestsellerProducts = () => {
   const [bestSellingItem, setBestSellingItem] = useState([
     {
       id: 1,
-      name: "Organic Tomato",
-      imgUrl: OrganicTomato,
+      name: "Ovaltine",
+      imgUrl: Ovaltine,
       like: 34,
       disliked: 2,
       rating: 5,
     },
     {
       id: 2,
-      name: "Fresh Orange",
-      imgUrl: "/src/assets/img/best-product-2.jpg",
+      name: "Zafran",
+      imgUrl: Zafran,
       like: 27,
       disliked: 3,
       rating: 4,
     },
     {
       id: 3,
-      name: "Green Apple",
-      imgUrl: "/src/assets/img/best-product-3.jpg",
+      name: "Basil Seed",
+      imgUrl: BasilSeed,
       like: 45,
       disliked: 5,
       rating: 3,
     },
     {
       id: 4,
-      name: "Organic Banana",
-      imgUrl: "/src/assets/img/best-product-4.jpg",
+      name: "Sun Flower Oil",
+      imgUrl: SunFlowerOil,
       like: 30,
       disliked: 1,
       rating: 4,
     },
     {
       id: 5,
-      name: "Fresh Orange",
-      imgUrl: "/src/assets/img/best-product-2.jpg",
+      name: "Healthy Soups",
+      imgUrl: HealthySoups,
+      like: 27,
+      disliked: 3,
+      rating: 4,
+    },
+    {
+      id: 6,
+      name: "Linkgo",
+      imgUrl: Linkgo,
+      like: 67,
+      disliked: 3,
+      rating: 4,
+    },
+    {
+      id: 7,
+      name: "Dry Bean",
+      imgUrl: DryBean,
+      like: 27,
+      disliked: 3,
+      rating: 4,
+    },
+    {
+      id: 8,
+      name: "Elachi Rusk",
+      imgUrl: ElachiRusk,
       like: 27,
       disliked: 3,
       rating: 4,
@@ -80,6 +111,7 @@ const BestselleProducts = () => {
               <div className="text-center p-4 border rounded bg-light">
                 <img
                   src={item.imgUrl}
+                  style={{"height":"150px"}}
                   className="img-fluid rounded"
                   alt={item.name}
                 />
@@ -95,9 +127,6 @@ const BestselleProducts = () => {
                       <i key={i} className="fas fa-star text-secondary"></i>
                     ))}
                   </div>
-
-                  <h4 className="mb-3">$3.12</h4>
-
                   {/* Like & Dislike Section */}
                   <div className="d-flex justify-content-center gap-3">
                     <button
@@ -123,4 +152,4 @@ const BestselleProducts = () => {
   );
 };
 
-export default BestselleProducts;
+export default BestsellerProducts;
