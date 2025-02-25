@@ -1,5 +1,5 @@
 import BannerOne from "./BannerOne";
-import BestselleProducts from "./BestselleProducts";
+import BestsellerProducts from "./BestselleProducts";
 import FactsSection from "./FactsSection";
 import FeaturesCategory from "./FeaturesCategory";
 import FeaturesFruitsDisplay from "./FeaturesFruitsDisplay";
@@ -17,7 +17,7 @@ const Home = () => {
       <FeaturesFruitsDisplay />
       <FeaturesVegetablesDisplay />
       <BannerOne />
-      <BestselleProducts />
+      <BestsellerProducts />
       <FactsSection />
       <Testimonial/>
     </div>

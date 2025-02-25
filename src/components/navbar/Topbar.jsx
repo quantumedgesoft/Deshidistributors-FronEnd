@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 
 const Topbar = () => {
   return (
@@ -18,9 +19,9 @@ const Topbar = () => {
               </small>
             </div>
             <div className="top-link pe-2">
-              <a href="#" className="text-white">
+              <Link to="/privacy-Policy" className="text-white">
                 <small className="text-white mx-2">Privacy Policy</small>/
-              </a>
+              </Link>
               <a href="#" className="text-white">
                 <small className="text-white mx-2">Terms of Use</small>/
               </a>
