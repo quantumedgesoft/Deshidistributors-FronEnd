@@ -10,7 +10,7 @@ const FeaturesFruitsDisplay = () => {
                         <img src="/img/products/Honey.png" className="img-fluid rounded-top w-100" style={{maxHeight: "325px"}} alt=""/>
                         <div className="px-4 rounded-bottom">
                             <div className="service-content bg-primary text-center p-4 rounded">
-                                <h5 className="text-white">Fresh Honey</h5>
+                                <h5 className="text-white">Sunday Special</h5>
                                 <h3 className="mb-0">20% OFF</h3>
                             </div>
                         </div>
@@ -23,7 +23,7 @@ const FeaturesFruitsDisplay = () => {
                         <img src="/img/products/Dates.png" className="img-fluid rounded-top w-100" style={{maxHeight: "325px"}} alt=""/>
                         <div className="px-4 rounded-bottom">
                             <div className="service-content bg-light text-center p-4 rounded">
-                                <h5 className="text-primary">Tasty Dates</h5>
+                                <h5 className="text-primary">Ramadan Special</h5>
                                 <h3 className="mb-0">10% OFF</h3>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ const FeaturesFruitsDisplay = () => {
                         <img src="/img/products/Spices & Herbs.png" className="img-fluid rounded-top w-100" style={{maxHeight: "325px", minHeight: "325px"}} alt=""/>
                         <div className="px-4 rounded-bottom">
                             <div className="service-content bg-secondary text-center p-4 rounded">
-                                <h5 className="text-white">Spices & Herbs</h5>
+                                <h5 className="text-white">Black Friday</h5>
                                 <h3 className="mb-0">Discount 3$</h3>
                             </div>
                         </div>

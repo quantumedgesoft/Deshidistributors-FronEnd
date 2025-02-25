@@ -71,7 +71,8 @@ const Navbar = () => {
             </button>
             <div
               className="collapse navbar-collapse bg-white"
-              id="navbarCollapse" style={{position: "relative"}}
+              id="navbarCollapse"
+              style={{ position: "relative" }}
             >
               <div className="navbar-nav mx-auto">
                 <Link to="/" className="nav-item nav-link active">
@@ -109,10 +110,18 @@ const Navbar = () => {
               </div>
 
               <div className="d-flex m-3 me-0">
+                {/* <button
+                  type="submit"
+                  className="btn-primary border-0 py-2 px-5  rounded-pill text-white"
+                  style={{ top: "0", right: "25%" }}
+                >
+                  Contact
+                </button> */}
+
                 <button
                   type="submit"
-                  className="btn btn-primary border-2 border-secondary py-2 px-5  rounded-pill text-white"
-                  style={{ top: "0", right: "25%" }}
+                  className="btn btn-primary border-0 border-secondary py-2 px-5 position-absolute rounded-pill text-white"
+                  style={{ top: "0", right: "0" }}
                 >
                   Contact
                 </button>
