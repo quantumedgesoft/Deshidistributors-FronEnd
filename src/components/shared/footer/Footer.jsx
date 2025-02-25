@@ -1,18 +1,16 @@
-import React from "react";
-import logo from '../../../assets/Images/deshidistributors_logo.png'
 import { Link } from "react-router";
 const Footer = () => {
   return (
-    <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+    <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
       <div className="container py-5">
         <div
           className="pb-4 mb-4"
-          style={{ borderBottom: "1px solid rgba(226, 175, 24, 0.5)" }}
+          style={{ borderBottom: "1px solid rgba(62, 62, 60, 0.5)" }}
         >
           <div className="row g-4">
             <div className="col-lg-3">
               <a href="#">
-                  <img className="w-50" src={logo} alt="" />
+                  <img className="w-50" src="/img/logo_light.png" alt="" />
               </a>
             </div>
             <div className="col-lg-6">
@@ -33,26 +31,30 @@ const Footer = () => {
             </div>
             <div className="col-lg-3">
               <div className="d-flex justify-content-end pt-3">
+
                 <a
-                  className="btn  btn-outline-secondary me-2 btn-md-square rounded-circle"
+                  className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
                   href=""
                 >
                   <i className="fab fa-twitter"></i>
                 </a>
+
                 <a
-                  className="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
+                  className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
                   href=""
                 >
                   <i className="fab fa-facebook-f"></i>
                 </a>
+
                 <a
-                  className="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
+                  className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
                   href=""
                 >
                   <i className="fab fa-youtube"></i>
                 </a>
+
                 <a
-                  className="btn btn-outline-secondary btn-md-square rounded-circle"
+                  className="border border-primary btn-outline-primary btn-md-square rounded-circle"
                   href=""
                 >
                   <i className="fab fa-linkedin-in"></i>
