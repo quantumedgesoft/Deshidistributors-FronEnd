@@ -6,7 +6,7 @@ const OrganicFruitsDisplay = () => {
   const products = [
     {
       id: 1,
-      category: "fruits",
+      category: "best",
       title: "Rice",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -14,7 +14,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 2,
-      category: "vegetables",
+      category: "recent",
       title: "Daal",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -22,7 +22,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 3,
-      category: "bread",
+      category: "popular",
       title: "Flour",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -30,7 +30,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 4,
-      category: "meat",
+      category: "best",
       title: "Edible Oil",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -38,7 +38,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 5,
-      category: "fruits",
+      category: "recent",
       title: "Nuts",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -46,7 +46,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 6,
-      category: "vegetables",
+      category: "popular",
       title: "Spices & Herbs",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -54,7 +54,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 7,
-      category: "fruits",
+      category: "best",
       title: "Sugar",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -62,7 +62,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 8,
-      category: "bread",
+      category: "recent",
       title: "Salt",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -70,7 +70,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 9,
-      category: "bread",
+      category: "popular",
       title: "Ghee",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -78,7 +78,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 10,
-      category: "bread",
+      category: "best",
       title: "Pickle",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -86,7 +86,7 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 11,
-      category: "bread",
+      category: "recent",
       title: "Soup",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
@@ -94,100 +94,102 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 12,
-      category: "Noodles",
+      category: "popular",
       title: "Soup",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
         img: "/img/products/Noodles.jpeg",
     },
-    {
-      id: 13,
-      category: "Noodles",
-      title: "Chanachur",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Chanachur.png",
-    },
-    {
-      id: 14,
-      category: "Noodles",
-      title: "Dates",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Dates.png",
-    },
-    {
-      id: 15,
-      category: "Noodles",
-      title: "Biscuit",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Biscuit.jpg",
-    },
-    {
-      id: 16,
-      category: "Noodles",
-      title: "Sauce",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Sauce.jpg",
-    },
-    {
-      id: 17,
-      category: "Noodles",
-      title: "Honey",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Honey.png",
-    },
-    {
-      id: 18,
-      category: "Noodles",
-      title: "Tea, Coffee, Milk Drinks",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Tea, Coffee, Milk Drinks.png",
-    },
-    {
-      id: 19,
-      category: "Noodles",
-      title: "Candy",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Candy.jpg",
-    },
-    {
-      id: 20,
-      category: "Noodles",
-      title: "Paan",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Paan.png",
-    },
-    {
-      id: 21,
-      category: "Noodles",
-      title: "Healthcare & Beauty",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Healthcare & Beauty.jpg",
-    },
-    {
-      id: 22,
-      category: "Noodles",
-      title: "Soap",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Soap.png",
-    },
-    {
-      id: 23,
-      category: "Noodles",
-      title: "Miscellaneous",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Miscellaneous.jpg",
-    },
+
+
+    // {
+    //   id: 13,
+    //   category: "Noodles",
+    //   title: "Chanachur",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Chanachur.png",
+    // },
+    // {
+    //   id: 14,
+    //   category: "Noodles",
+    //   title: "Dates",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Dates.png",
+    // },
+    // {
+    //   id: 15,
+    //   category: "Noodles",
+    //   title: "Biscuit",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Biscuit.jpg",
+    // },
+    // {
+    //   id: 16,
+    //   category: "Noodles",
+    //   title: "Sauce",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Sauce.jpg",
+    // },
+    // {
+    //   id: 17,
+    //   category: "Noodles",
+    //   title: "Honey",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Honey.png",
+    // },
+    // {
+    //   id: 18,
+    //   category: "Noodles",
+    //   title: "Tea, Coffee, Milk Drinks",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Tea, Coffee, Milk Drinks.png",
+    // },
+    // {
+    //   id: 19,
+    //   category: "Noodles",
+    //   title: "Candy",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Candy.jpg",
+    // },
+    // {
+    //   id: 20,
+    //   category: "Noodles",
+    //   title: "Paan",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Paan.png",
+    // },
+    // {
+    //   id: 21,
+    //   category: "Noodles",
+    //   title: "Healthcare & Beauty",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Healthcare & Beauty.jpg",
+    // },
+    // {
+    //   id: 22,
+    //   category: "Noodles",
+    //   title: "Soap",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Soap.png",
+    // },
+    // {
+    //   id: 23,
+    //   category: "Noodles",
+    //   title: "Miscellaneous",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+    //     img: "/img/products/Miscellaneous.jpg",
+    // },
   ];
 
   const menus = [
@@ -198,24 +200,20 @@ const OrganicFruitsDisplay = () => {
     },
     {
       id: 2,
-      title: "Vegetables",
-      slug: "vegetables"
+      title: "Popular",
+      slug: "popular"
     },
     {
       id: 3,
-      title: "Fruits",
-      slug: "fruits"
+      title: "Recent",
+      slug: "recent"
     },
     {
       id: 4,
-      title: "Breads",
-      slug: "bread"
+      title: "Best Sale",
+      slug: "best"
     },
-    {
-      id: 5,
-      title: "Meat",
-      slug: "meat"
-    },
+
   ];
 
   const filterted = products.filter(item => item.category === filter);
@@ -228,7 +226,7 @@ const OrganicFruitsDisplay = () => {
         <div className="tab-class text-center">
           <div className="row g-4">
             <div className="col-lg-4 text-start">
-              <h1>Our Organic Products</h1>
+              <h1>Our Products</h1>
             </div>
 
             <div className="col-lg-8 text-end">
@@ -246,52 +244,18 @@ const OrganicFruitsDisplay = () => {
                   </li>
                 ))}
 
-                {/* <li className="nav-item">
-                  <button
+                <li className="nav-item">
+                  <a
                     className="d-flex py-2 m-2 bg-light rounded-pill"
                     data-bs-toggle="pill"
                     href="#tab-2"
                   >
-                    <span className="text-dark" style={{ width: "130px" }}>
-                      Vegetables
+                    <span className="text-dark " style={{ width: "130px" }}>
+                      See all
                     </span>
-                  </button>
-                </li> */}
+                  </a>
+                </li>
 
-                {/*  <li className="nav-item">
-                  <button
-                    className="d-flex m-2 py-2 bg-light rounded-pill"
-                    data-bs-toggle="pill"
-                    href="#tab-3"
-                  >
-                    <span className="text-dark" style={{ width: "130px" }}>
-                      Fruits
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button
-                    className="d-flex m-2 py-2 bg-light rounded-pill"
-                    data-bs-toggle="pill"
-                    href="#tab-4"
-                  >
-                    <span className="text-dark" style={{ width: "130px" }}>
-                      Bread
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button
-                    className="d-flex m-2 py-2 bg-light rounded-pill"
-                    data-bs-toggle="pill"
-                    href="#tab-5"
-                  >
-                    <span className="text-dark" style={{ width: "130px" }}>
-                      Meat
-                    </span>
-                  </button>
-                </li>
-                 */}
               </ul>
             </div>
           </div>
@@ -317,7 +281,7 @@ const OrganicFruitsDisplay = () => {
                           </div>
 
                           <div
-                            className="text-white bg-primary px-3 py-1 rounded position-absolute"
+                            className="text-white bg-primary px-3 py-1 rounded position-absolute text-capitalize"
                             style={{ top: "10px", left: "10px" }}
                           >
                             {item.category}
