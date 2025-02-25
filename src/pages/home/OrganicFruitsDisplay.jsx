@@ -7,66 +7,186 @@ const OrganicFruitsDisplay = () => {
     {
       id: 1,
       category: "fruits",
-      title: "Grapes",
+      title: "Rice",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-5.jpg",
+      img: "/img/products/rice.jpg",
     },
     {
       id: 2,
       category: "vegetables",
-      title: "Raspberries",
+      title: "Daal",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-2.jpg",
+      img: "/img/products/Daal.jpeg",
     },
     {
       id: 3,
       category: "bread",
-      title: "Apricots",
+      title: "Flour",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-4.jpg",
+        img: "/img/products/Flour.jpeg",
     },
     {
       id: 4,
       category: "meat",
-      title: "Banana",
+      title: "Edible Oil",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-3.jpg",
+        img: "/img/products/Edible Oil.jpg",
     },
     {
       id: 5,
       category: "fruits",
-      title: "Oranges",
+      title: "Nuts",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-1.jpg",
+      img: "/img/products/Nuts.jpg",
     },
     {
       id: 6,
       category: "vegetables",
-      title: "Raspberries",
+      title: "Spices & Herbs",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-2.jpg",
+      img: "/img/products/Spices & Herbs.png",
     },
     {
       id: 7,
       category: "fruits",
-      title: "Grapes",
+      title: "Sugar",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-5.jpg",
+        img: "/img/products/Sugar.jpg",
     },
     {
       id: 8,
       category: "bread",
-      title: "Apricots",
+      title: "Salt",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-      img: "/src/assets/img/fruite-item-4.jpg",
+        img: "/img/products/Salt.png",
+    },
+    {
+      id: 9,
+      category: "bread",
+      title: "Ghee",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Ghee.png",
+    },
+    {
+      id: 10,
+      category: "bread",
+      title: "Pickle",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Pickle.jpg",
+    },
+    {
+      id: 11,
+      category: "bread",
+      title: "Soup",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Soup.jpg",
+    },
+    {
+      id: 12,
+      category: "Noodles",
+      title: "Soup",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Noodles.jpeg",
+    },
+    {
+      id: 13,
+      category: "Noodles",
+      title: "Chanachur",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Chanachur.png",
+    },
+    {
+      id: 14,
+      category: "Noodles",
+      title: "Dates",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Dates.png",
+    },
+    {
+      id: 15,
+      category: "Noodles",
+      title: "Biscuit",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Biscuit.jpg",
+    },
+    {
+      id: 16,
+      category: "Noodles",
+      title: "Sauce",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Sauce.jpg",
+    },
+    {
+      id: 17,
+      category: "Noodles",
+      title: "Honey",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Honey.png",
+    },
+    {
+      id: 18,
+      category: "Noodles",
+      title: "Tea, Coffee, Milk Drinks",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Tea, Coffee, Milk Drinks.png",
+    },
+    {
+      id: 19,
+      category: "Noodles",
+      title: "Candy",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Candy.jpg",
+    },
+    {
+      id: 20,
+      category: "Noodles",
+      title: "Paan",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Paan.png",
+    },
+    {
+      id: 21,
+      category: "Noodles",
+      title: "Healthcare & Beauty",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Healthcare & Beauty.jpg",
+    },
+    {
+      id: 22,
+      category: "Noodles",
+      title: "Soap",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Soap.png",
+    },
+    {
+      id: 23,
+      category: "Noodles",
+      title: "Miscellaneous",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        img: "/img/products/Miscellaneous.jpg",
     },
   ];
 
@@ -177,30 +297,37 @@ const OrganicFruitsDisplay = () => {
           </div>
 
           <div className="tab-content">
+
             <div id="tab-1" className="tab-pane fade show p-0 active">
               <div className="row g-4">
                 <div className="col-lg-12">
                   <div className="row g-4">
                     {filteredProducts.map((item) => (
                       <div key={item.id} className="col-md-6 col-lg-4 col-xl-3">
-                        <div className="rounded position-relative fruite-item">
+                        <div className="rounded position-relative fruite-item overflow-hidden border border-secondary">
+
                           <div className="fruite-img">
                             <img
                               src={item.img}
-                              className="img-fluid w-100 rounded-top"
+                              className="img-fluid w-100 h-100 rounded-top"
+                              style={{maxHeight: "280px", minHeight:"280px" }}
                               alt=""
+                              
                             />
                           </div>
+
                           <div
                             className="text-white bg-primary px-3 py-1 rounded position-absolute"
                             style={{ top: "10px", left: "10px" }}
                           >
                             {item.category}
                           </div>
-                          <div className="p-4 border border-secondary border-top-0 rounded-bottom">
+
+                          <div className="p-4 rounded-bottom">
                             <h4>{item.title}</h4>
-                            <p>{item.description}</p>
+                            {/* <p>{item.description}</p> */}
                           </div>
+
                         </div>
                       </div>
                     ))}
@@ -208,299 +335,7 @@ const OrganicFruitsDisplay = () => {
                 </div>
               </div>
             </div>
-            <div id="tab-2" className="tab-pane fade show p-0">
-              <div className="row g-4">
-                <div className="col-lg-12">
-                  <div className="row g-4">
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-5.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Grapes</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-2.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Raspberries</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="tab-3" className="tab-pane fade show p-0">
-              <div className="row g-4">
-                <div className="col-lg-12">
-                  <div className="row g-4">
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-1.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Oranges</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-6.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Apple</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="tab-4" className="tab-pane fade show p-0">
-              <div className="row g-4">
-                <div className="col-lg-12">
-                  <div className="row g-4">
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-5.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Grapes</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-4.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Apricots</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="tab-5" className="tab-pane fade show p-0">
-              <div className="row g-4">
-                <div className="col-lg-12">
-                  <div className="row g-4">
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-3.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Banana</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-2.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Raspberries</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 col-xl-3">
-                      <div className="rounded position-relative fruite-item">
-                        <div className="fruite-img">
-                          <img
-                            src="/src/assets/img/fruite-item-1.jpg"
-                            className="img-fluid w-100 rounded-top"
-                            alt=""
-                          />
-                        </div>
-                        <div
-                          className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                          style={{ top: "10px", left: "10px" }}
-                        >
-                          Fruits
-                        </div>
-                        <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                          <h4>Oranges</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit sed do eiusmod te incididunt
-                          </p>
-                          {/* <div className="d-flex justify-content-between flex-lg-wrap">
-                            <p className="text-dark fs-5 fw-bold mb-0">
-                              $4.99 / kg
-                            </p>
-                          </div> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
