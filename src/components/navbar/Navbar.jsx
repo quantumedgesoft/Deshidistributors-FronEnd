@@ -68,7 +68,7 @@ const Navbar = () => {
                     Products
                   </Link>
 
-                  <div className="dropdown-menu m-0 bg-secondary rounded-0">
+                  <div className="dropdown-menu m-0 bg-secondary rounded-0 overflow-auto" style={{maxHeight: "40vh"}}>
                     {categories.map((item, idx) => (
                       <Link
                         key={idx}

@@ -196,8 +196,8 @@ export default function VegetableSlidder() {
   return (
     <>
       <Swiper
-        spaceBetween={30}
-        slidesPerView={4}
+        spaceBetween={10}
+        slidesPerView={1}
         centeredSlides={false}
         loop={true}
         autoplay={{
@@ -205,9 +205,27 @@ export default function VegetableSlidder() {
           disableOnInteraction: false,
         }}
         pagination={false}
+        
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        }}
         navigation={false}
         modules={[Autoplay]}
         className=""
+
+
+
       >
         {products.map((item) => (
           <SwiperSlide key={item.id}>
