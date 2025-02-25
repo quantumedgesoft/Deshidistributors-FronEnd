@@ -232,7 +232,6 @@ export default function VegetableSlidder() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
                   eiusmod te incididunt
                 </p>
-
               </div>
             </div>
           </SwiperSlide>
