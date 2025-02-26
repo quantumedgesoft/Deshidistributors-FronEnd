@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import Topbar from "./Topbar";
 import logo from "../../assets/Images/deshidistributors_logo.png";
 const Navbar = () => {
-  
   const categories = [
     "Snacks",
     "Pickle",
@@ -68,7 +67,10 @@ const Navbar = () => {
                     Products
                   </Link>
 
-                  <div className="dropdown-menu m-0 bg-secondary rounded-0 overflow-auto" style={{maxHeight: "40vh"}}>
+                  <div
+                    className="dropdown-menu m-0 bg-secondary rounded-0 overflow-auto"
+                    style={{ maxHeight: "40vh" }}
+                  >
                     {categories.map((item, idx) => (
                       <Link
                         key={idx}
@@ -86,15 +88,13 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              <div className="d-flex m-3 me-0">
-                <button
-                  type="submit"
-                  className="btn btn-primary border-0 border-secondary py-2 px-5 position-absolute rounded-pill text-white"
-                  style={{ top: "0", right: "0" }}
-                >
-                  Contact
-                </button>
-              </div>
+              <button
+                type="submit"
+                className="btn btn-primary border-2 border-secondary py-2 px-4  rounded-pill text-white h-100"
+                style={{ top: "0", right: "25%" }}
+              >
+                Submit Now
+              </button>
             </div>
           </nav>
         </div>

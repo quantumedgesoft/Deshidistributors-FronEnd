@@ -193,7 +193,7 @@
       rgba(248, 223, 173, 0.1),
       rgba(248, 223, 173, 0.1)
     ),
-    url(../img/hero-img.jpg);
+    url(/img//products//hero-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -272,7 +272,7 @@
   bottom: -8px;
   transform: translate(-50%);
   transform: rotate(45deg);
-  background: var(--bs-khaki);
+  background: var(--bs-secondary);
 }
 /*** featurs End ***/
 
@@ -507,11 +507,17 @@
 .HeroSlider .swiper-button-prev,
 .HeroSlider .swiper-button-next {
   border: 1px solid white;
-  background-color: orange;
+  background-color: var(--bs-primary);
+  backface-visibility: var(10%);
   width: 35px !important;
   height: 35px !important;
   border-radius: 50%;
   color: white;
+  opacity: 50%;
+}
+.HeroSlider .swiper-button-prev:hover,
+.HeroSlider .swiper-button-next:hover {
+  opacity: 100%;
 }
 
 .HeroSlider .swiper-button-prev:after,
@@ -535,4 +541,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
