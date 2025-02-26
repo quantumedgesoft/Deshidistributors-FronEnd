@@ -37,6 +37,7 @@ const Navbar = () => {
             <Link to="/" className="navbar-brand">
               <img src={logo} alt="" className="" style={{ width: "150px" }} />
             </Link>
+
             <button
               className="navbar-toggler py-2 px-3"
               type="button"
@@ -45,6 +46,9 @@ const Navbar = () => {
             >
               <span className="fa fa-bars text-primary"></span>
             </button>
+
+            {/* <MobileSideMenu categories={categories} /> */}
+
             <div
               className="collapse navbar-collapse bg-white"
               id="navbarCollapse"
@@ -86,6 +90,9 @@ const Navbar = () => {
                 <Link to="/contact" className="nav-item nav-link">
                   Operation Map
                 </Link>
+                <Link to="/contact" className="nav-item nav-link">
+                  Contact
+                </Link>
               </div>
 
               <button
@@ -93,7 +100,7 @@ const Navbar = () => {
                 className="btn btn-primary border-2 border-secondary py-2 px-4  rounded-pill text-white h-100"
                 style={{ top: "0", right: "25%" }}
               >
-                Submit Now
+                Career
               </button>
             </div>
           </nav>
