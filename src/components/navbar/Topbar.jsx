@@ -7,9 +7,9 @@ const Topbar = () => {
             <div className="top-info ps-2">
               <small className="me-3">
                 <i className="fas fa-map-marker-alt me-2 text-white"></i>
-                <a href="#" className="text-white">
+                <Link to="/contact" className="text-white">
                   123 Street, New York
-                </a>
+                </Link>
               </small>
               <small className="me-3">
                 <i className="fas fa-envelope me-2 text-white"></i>
@@ -22,12 +22,12 @@ const Topbar = () => {
               <Link to="/privacy-Policy" className="text-white">
                 <small className="text-white mx-2">Privacy Policy</small>/
               </Link>
-              <a href="#" className="text-white">
+              <Link to="/terms-of-use" className="text-white">
                 <small className="text-white mx-2">Terms of Use</small>/
-              </a>
-              <a href="#" className="text-white">
-                <small className="text-white ms-2">Oraganic</small>
-              </a>
+              </Link>
+              <Link href="/" className="text-white">
+                <small className="text-white ms-2">Organic</small>
+              </Link>
             </div>
           </div>
         </div>

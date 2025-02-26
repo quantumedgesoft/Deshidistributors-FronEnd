@@ -5,6 +5,7 @@ import App from "../App"
 import Contact from "../pages/contact/Contact";
 import Shop from "../pages/shop/Shop";
 import PrivacyAndPolicy from "../pages/privacy_policy/PrivacyAndPolicy";
+import TermsOfUse from "../pages/termsOfUse/TermsOfUse";
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
       </Route>
     </Routes>
   );
