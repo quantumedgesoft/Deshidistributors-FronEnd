@@ -216,7 +216,7 @@ export default function VegetableSlidder() {
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 10,
           },
         }}

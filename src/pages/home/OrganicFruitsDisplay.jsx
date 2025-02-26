@@ -232,7 +232,7 @@ const OrganicFruitsDisplay = () => {
             <div className="col-lg-8 text-end">
               <ul className="nav nav-pills d-inline-flex text-center mb-5">
                 {menus.map((item) => (
-                  <li key={item.id} className="nav-item">
+                  <li key={item.id} className="nav-item cursor-pointer">
                     <a onClick={()=>setFilter(item.slug)}
                       className={`d-flex m-2 py-2 bg-light rounded-pill  ${filter === item.slug ? "active" : ""}`}
                       data-bs-toggle="pill"
