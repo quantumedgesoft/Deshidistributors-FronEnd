@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const BannerOne = () => {
   return (
     <div className="container-fluid banner bg-secondary my-5">
@@ -8,15 +10,14 @@ const BannerOne = () => {
               <h1 className="display-3 text-white">Fresh Daal</h1>
               <p className="fw-normal display-3 text-dark mb-4">in Our Store</p>
               <p className="mb-4 text-dark">
-                The generated Lorem Ipsum is therefore always free from
-                repetition injected humour, or non-characteristic words etc.
+              Enjoy the finest quality Fresh Daal, rich in protein and essential nutrients. Perfect for healthy and delicious meals, our daal is sourced from premium farms to ensure purity and taste. Shop now for the best selection!
               </p>
-              <a
-                href="#"
+              <Link
+                to="/products"
                 className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5"
               >
                 More
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-6">
