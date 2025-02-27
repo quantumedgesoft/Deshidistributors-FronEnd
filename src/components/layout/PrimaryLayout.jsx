@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../navbar/Navbar";
 import { Outlet } from "react-router";
 import Footer from "../shared/footer/Footer";
+import Copyright from "../shared/footer/Copyright";
 
 const PrimaryLayout = () => {
   return (
@@ -9,6 +10,7 @@ const PrimaryLayout = () => {
       <Navbar />
       <Outlet />
       <Footer />
+      <Copyright/>
     </div>
   );
 };
