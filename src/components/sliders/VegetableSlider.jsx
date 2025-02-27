@@ -11,7 +11,7 @@ export default function VegetableSlidder() {
       category: "best",
       title: "Rice",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Sourced from the finest fields, our rice offers a fragrant aroma and soft texture, perfect for any dish. Available in Basmati, Jasmine, and Sona Masoori varieties.",
       img: "/img/products/rice.jpg",
     },
     {
@@ -19,7 +19,7 @@ export default function VegetableSlidder() {
       category: "recent",
       title: "Daal",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our high-quality pulses are packed with protein and flavor, perfect for a variety of dishes. Available in lentils, chickpeas, and more, offering nutrition and taste in every bite.",
       img: "/img/products/Daal.jpeg",
     },
     {
@@ -27,7 +27,7 @@ export default function VegetableSlidder() {
       category: "popular",
       title: "Flour",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our flour is finely milled for superior texture and quality, perfect for baking, cooking, and making traditional dishes. Available in all-purpose, whole wheat, and specialty varieties.",
       img: "/img/products/Flour.jpeg",
     },
     {
@@ -35,7 +35,7 @@ export default function VegetableSlidder() {
       category: "best",
       title: "Edible Oil",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our edible oil is refined for purity and taste, ideal for cooking, frying, and enhancing your dishes. Available in various types like sunflower, mustard, and sesame.",
       img: "/img/products/Edible Oil.jpg",
     },
     {
@@ -43,7 +43,7 @@ export default function VegetableSlidder() {
       category: "recent",
       title: "Nuts",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our nuts are carefully selected for freshness and flavor, perfect for snacking or adding a crunch to your meals. Available in almonds, cashews, pistachios, and more.",
       img: "/img/products/Nuts.jpg",
     },
     {
@@ -51,7 +51,7 @@ export default function VegetableSlidder() {
       category: "popular",
       title: "Spices & Herbs",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our spices and herbs bring rich flavor and aroma to every dish. Sourced from the finest farms, perfect for enhancing your cooking with traditional and bold tastes.",
       img: "/img/products/Spices & Herbs.png",
     },
     {
@@ -59,7 +59,7 @@ export default function VegetableSlidder() {
       category: "best",
       title: "Sugar",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our sugar is refined to perfection, adding the perfect sweetness to your desserts, beverages, and everyday meals. Available in white, brown, and raw varieties.",
       img: "/img/products/Sugar.jpg",
     },
     {
@@ -67,7 +67,7 @@ export default function VegetableSlidder() {
       category: "recent",
       title: "Salt",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our salt is harvested for purity and flavor, perfect for seasoning your dishes. Available in fine, coarse, and Himalayan varieties to suit all your cooking needs.",
       img: "/img/products/Salt.png",
     },
     {
@@ -75,7 +75,7 @@ export default function VegetableSlidder() {
       category: "popular",
       title: "Ghee",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our ghee is rich, aromatic, and made from the finest butter, perfect for cooking, baking, or adding a traditional touch to your meals.",
       img: "/img/products/Ghee.png",
     },
     {
@@ -83,7 +83,7 @@ export default function VegetableSlidder() {
       category: "best",
       title: "Pickle",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our pickles are made from the finest ingredients, bursting with bold, tangy flavors. Perfect for adding a zesty kick to your meals. Available in various varieties like mango, lime, and mixed vegetables.",
       img: "/img/products/Pickle.jpg",
     },
     {
@@ -99,98 +99,9 @@ export default function VegetableSlidder() {
       category: "popular",
       title: "Soup",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "Our soups are crafted with rich flavors and quality ingredients, perfect for a hearty meal or a light snack. Available in a variety of savory options to satisfy every taste.",
       img: "/img/products/Noodles.jpeg",
     },
-
-    // {
-    //   id: 13,
-    //   category: "Noodles",
-    //   title: "Chanachur",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Chanachur.png",
-    // },
-    // {
-    //   id: 14,
-    //   category: "Noodles",
-    //   title: "Dates",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Dates.png",
-    // },
-    // {
-    //   id: 15,
-    //   category: "Noodles",
-    //   title: "Biscuit",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Biscuit.jpg",
-    // },
-    // {
-    //   id: 16,
-    //   category: "Noodles",
-    //   title: "Sauce",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Sauce.jpg",
-    // },
-    // {
-    //   id: 17,
-    //   category: "Noodles",
-    //   title: "Honey",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Honey.png",
-    // },
-    // {
-    //   id: 18,
-    //   category: "Noodles",
-    //   title: "Tea, Coffee, Milk Drinks",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Tea, Coffee, Milk Drinks.png",
-    // },
-    // {
-    //   id: 19,
-    //   category: "Noodles",
-    //   title: "Candy",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Candy.jpg",
-    // },
-    // {
-    //   id: 20,
-    //   category: "Noodles",
-    //   title: "Paan",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Paan.png",
-    // },
-    // {
-    //   id: 21,
-    //   category: "Noodles",
-    //   title: "Healthcare & Beauty",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Healthcare & Beauty.jpg",
-    // },
-    // {
-    //   id: 22,
-    //   category: "Noodles",
-    //   title: "Soap",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Soap.png",
-    // },
-    // {
-    //   id: 23,
-    //   category: "Noodles",
-    //   title: "Miscellaneous",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Miscellaneous.jpg",
-    // },
   ];
 
   return (
@@ -200,12 +111,11 @@ export default function VegetableSlidder() {
         slidesPerView={1}
         centeredSlides={false}
         loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={false}
-        
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -223,9 +133,6 @@ export default function VegetableSlidder() {
         navigation={false}
         modules={[Autoplay]}
         className=""
-
-
-
       >
         {products.map((item) => (
           <SwiperSlide key={item.id}>
@@ -234,7 +141,7 @@ export default function VegetableSlidder() {
                 <img
                   src={item.img}
                   className="img-fluid w-100 rounded-top"
-                  style={{maxHeight: "250px", minHeight: "250px"}}
+                  style={{ maxHeight: "250px", minHeight: "250px" }}
                   alt=""
                 />
               </div>
@@ -246,10 +153,7 @@ export default function VegetableSlidder() {
               </div>
               <div className="p-4 rounded-bottom">
                 <h4>{item.title}</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                  eiusmod te incididunt
-                </p>
+                <p>{item.description?.slice(0, 100)}...</p>
               </div>
             </div>
           </SwiperSlide>
