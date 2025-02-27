@@ -1,6 +1,11 @@
 import { Link } from "react-router"
 
 const Topbar = () => {
+  const topData = {
+    location: "Jamaica, NY, United States, New York",
+    email: "mydeshiny@gmail.com",
+    phone: "+1 718-291-1205"
+  };
   return (
     <div className="container topbar bg-primary d-none d-lg-block">
           <div className="d-flex justify-content-between">
@@ -8,26 +13,23 @@ const Topbar = () => {
               <small className="me-3">
                 <i className="fas fa-map-marker-alt me-2 text-white"></i>
                 <Link to="/contact" className="text-white">
-                  123 Street, New York
+                {topData.location}
                 </Link>
               </small>
               <small className="me-3">
                 <i className="fas fa-envelope me-2 text-white"></i>
-                <a href="#" className="text-white">
-                  info@Deshidistributors.com
-                </a>
+                <Link to={`mailto:${topData.email}`} className="text-white">
+                  {topData.email}
+                </Link>
               </small>
             </div>
             <div className="top-link pe-2">
-              <Link to="/privacy-Policy" className="text-white">
-                <small className="text-white mx-2">Privacy Policy</small>/
-              </Link>
-              <Link to="/terms-of-use" className="text-white">
-                <small className="text-white mx-2">Terms of Use</small>/
-              </Link>
-              <Link href="/" className="text-white">
-                <small className="text-white ms-2">Organic</small>
-              </Link>
+              <small className="me-3">
+                <i className="fa-solid fa-phone-volume me-2 text-white"></i>
+                <Link to={`tel:${topData.phone}`} className="text-white">
+                  <b>Call Us:</b> {topData.phone}
+                </Link>
+              </small>
             </div>
           </div>
         </div>
