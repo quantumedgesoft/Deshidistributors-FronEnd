@@ -7,6 +7,7 @@ import FeaturesVegetablesDisplay from "./FeaturesVegetablesDisplay";
 import HeroSection from "./HeroSection";
 import OrganicFruitsDisplay from "./OrganicFruitsDisplay";
 import Testimonial from "./Testimonial";
+import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <FeaturesVegetablesDisplay />
       <BannerOne />
       <BestsellerProducts />
+      <WhyChooseUs/>
       <FactsSection />
       <Testimonial/>
     </div>

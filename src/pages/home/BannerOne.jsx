@@ -46,7 +46,7 @@ const BannerOne = () => {
 
               <div
               id="circleAnim"
-                className=" position-absolute border-secondary"
+                className="position-absolute"
                 style={{
                   width: "140px",
                   height: "140px",

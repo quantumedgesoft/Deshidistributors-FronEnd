@@ -136,7 +136,7 @@ export default function VegetableSlidder() {
       >
         {products.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="border border-primary rounded position-relative vesitable-item">
+            <div className="border border-primary rounded position-relative vesitable-item" style={{maxHeight: "450px", minHeight: "450px"}}>
               <div className="vesitable-img">
                 <img
                   src={item.img}

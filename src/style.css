@@ -546,3 +546,58 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+/* Why Choose Us Section */
+
+.WhyChooseUsContainer {
+  width: 100%;
+}
+
+.LeftContent,
+.RightContent {
+  width: 30%;
+}
+
+.WhyChooseUsContainer .centerImg {
+  width: 40%;
+}
+
+.choose-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/img/icons/locationBg.svg");
+  height: 78px;
+  width: 78px;
+  background-size: cover;
+  background-position: center;
+}
+
+.choose-item i {
+  color: white;
+  font-size: 50px;
+}
+
+.LeftContent H4 {
+  font-size: 18px;
+}
+
+.LeftContent p {
+  font-size: 14px;
+  max-width: 195px;
+}
+
+@media screen and (max-width: 992px) {
+  .WhyChooseUsContainer .centerImg {
+    width: 100%;
+  }
+
+  .LeftContent,
+  .RightContent {
+    width: 100%;
+  }
+
+  .LeftContent p {
+    max-width: 100%;
+  }
+}
