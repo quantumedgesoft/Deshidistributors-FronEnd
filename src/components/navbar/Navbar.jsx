@@ -5,7 +5,7 @@ import logo from "../../assets/Images/deshidistributors_logo.png";
 const Navbar = () => {
   const menuItems = [
     { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
+    { name: "About Us", link: "/about" },
     {
       name: "Products",
       link: "/products",
