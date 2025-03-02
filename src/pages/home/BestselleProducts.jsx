@@ -147,6 +147,8 @@ const BestsellerProducts = () => {
             </div>
           ))}
         </div>
+
+        
       </div>
     </div>
   );
