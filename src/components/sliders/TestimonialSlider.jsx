@@ -3,36 +3,61 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
-import customerImg from "/src/assets/img/testimonial-1.jpg";
-import avatar from "/src/assets/img/avatar.jpg"
 export default function TestimonialSlider() {
   const CustomerReview = [
     {
       id: 1,
       name: "Harpoon Load",
       Profession: "Employee",
-      ImageUrl: customerImg,
+      ImageUrl: "/src/assets/img/testimonial-1.jpg",
       reviewText:
-        "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "Excellent quality products! The packaging was great, and the delivery was fast. Highly recommend!",
       rating: 5,
     },
     {
       id: 2,
-      name: "Jane Doe",
-      Profession: "Designer",
-      ImageUrl: avatar,
+      name: "MOHAMMAD ALAMGIR KABIR",
+      Profession: "Cofounder",
+      ImageUrl: '/img/owners/MOHAMMAD ALAMGIR KABIR_ Cofounder.jpeg',
       reviewText:
         "Great experience! The quality of service was top-notch. Highly recommended!",
       rating: 4,
     },
     {
       id: 3,
-      name: "John Smith",
-      Profession: "Developer",
-      ImageUrl: avatar,
+      name: "md kamruzzamann",
+      Profession: "CEO_Cofounder",
+      ImageUrl: '/img/owners/mdkamruzzamann.jpeg',
       reviewText:
         "Fantastic work! Really satisfied with the professionalism and expertise.",
       rating: 3,
+    },
+    {
+      id: 3,
+      name: "Mohammed Abdur Rahman",
+      Profession: "President_Cofounder",
+      ImageUrl: '/img/owners/Mohammed Abdur Rahman_ Vice President_Cofounder.jpeg',
+      reviewText:
+        "Good product, but shipping took a little longer than expected. Still, very satisfied!",
+      rating: 2,
+    },
+    {
+      id: 3,
+      name: "Iftekhairul Alam",
+      Profession: "Cofounder",
+      ImageUrl: '/img/owners/Iftekhairul Alam_ Cofounder.jpeg',
+      reviewText:
+        "Loved the pistachios! Very fresh and tasty. Just wish there were more discounts.",
+      rating: 3,
+    },
+    {
+      id: 3,
+      name: "No name",
+      Profession: "President_Cofounder",
+      ImageUrl: "/src/assets/img/avatar.jpg",
+      reviewText:
+        "Good product, but shipping took a little longer than expected. Still, very satisfied!",
+      rating: 1
     },
   ];
 
