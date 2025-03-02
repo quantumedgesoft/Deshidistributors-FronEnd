@@ -26,7 +26,7 @@ const OrganicFruitsDisplay = () => {
       title: "Flour",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Flour.jpeg",
+      img: "/img/products/Flour.jpeg",
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const OrganicFruitsDisplay = () => {
       title: "Edible Oil",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Edible Oil.jpg",
+      img: "/img/products/Edible Oil.jpg",
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ const OrganicFruitsDisplay = () => {
       title: "Sugar",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Sugar.jpg",
+      img: "/img/products/Sugar.jpg",
     },
     {
       id: 8,
@@ -66,7 +66,7 @@ const OrganicFruitsDisplay = () => {
       title: "Salt",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Salt.png",
+      img: "/img/products/Salt.png",
     },
     {
       id: 9,
@@ -74,7 +74,7 @@ const OrganicFruitsDisplay = () => {
       title: "Ghee",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Ghee.png",
+      img: "/img/products/Ghee.png",
     },
     {
       id: 10,
@@ -82,7 +82,7 @@ const OrganicFruitsDisplay = () => {
       title: "Pickle",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Pickle.jpg",
+      img: "/img/products/Pickle.jpg",
     },
     {
       id: 11,
@@ -90,7 +90,7 @@ const OrganicFruitsDisplay = () => {
       title: "Soup",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Soup.jpg",
+      img: "/img/products/Soup.jpg",
     },
     {
       id: 12,
@@ -98,125 +98,34 @@ const OrganicFruitsDisplay = () => {
       title: "Soup",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        img: "/img/products/Noodles.jpeg",
+      img: "/img/products/Noodles.jpeg",
     },
-
-
-    // {
-    //   id: 13,
-    //   category: "Noodles",
-    //   title: "Chanachur",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Chanachur.png",
-    // },
-    // {
-    //   id: 14,
-    //   category: "Noodles",
-    //   title: "Dates",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Dates.png",
-    // },
-    // {
-    //   id: 15,
-    //   category: "Noodles",
-    //   title: "Biscuit",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Biscuit.jpg",
-    // },
-    // {
-    //   id: 16,
-    //   category: "Noodles",
-    //   title: "Sauce",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Sauce.jpg",
-    // },
-    // {
-    //   id: 17,
-    //   category: "Noodles",
-    //   title: "Honey",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Honey.png",
-    // },
-    // {
-    //   id: 18,
-    //   category: "Noodles",
-    //   title: "Tea, Coffee, Milk Drinks",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Tea, Coffee, Milk Drinks.png",
-    // },
-    // {
-    //   id: 19,
-    //   category: "Noodles",
-    //   title: "Candy",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Candy.jpg",
-    // },
-    // {
-    //   id: 20,
-    //   category: "Noodles",
-    //   title: "Paan",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Paan.png",
-    // },
-    // {
-    //   id: 21,
-    //   category: "Noodles",
-    //   title: "Healthcare & Beauty",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Healthcare & Beauty.jpg",
-    // },
-    // {
-    //   id: 22,
-    //   category: "Noodles",
-    //   title: "Soap",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Soap.png",
-    // },
-    // {
-    //   id: 23,
-    //   category: "Noodles",
-    //   title: "Miscellaneous",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-    //     img: "/img/products/Miscellaneous.jpg",
-    // },
   ];
 
   const menus = [
     {
       id: 1,
       title: "All Products",
-      slug: "all"
+      slug: "all",
     },
     {
       id: 2,
       title: "Popular",
-      slug: "popular"
+      slug: "popular",
     },
     {
       id: 3,
       title: "Recent",
-      slug: "recent"
+      slug: "recent",
     },
     {
       id: 4,
       title: "Best Sale",
-      slug: "best"
+      slug: "best",
     },
-
   ];
 
-  const filterted = products.filter(item => item.category === filter);
+  const filterted = products.filter((item) => item.category === filter);
 
   const filteredProducts = filter === "all" ? products : filterted;
 
@@ -233,8 +142,11 @@ const OrganicFruitsDisplay = () => {
               <ul className="nav nav-pills d-inline-flex text-center mb-5">
                 {menus.map((item) => (
                   <li key={item.id} className="nav-item cursor-pointer">
-                    <a onClick={()=>setFilter(item.slug)}
-                      className={`d-flex m-2 py-2 bg-light rounded-pill  ${filter === item.slug ? "active" : ""}`}
+                    <a
+                      onClick={() => setFilter(item.slug)}
+                      className={`d-flex m-2 py-2 bg-light rounded-pill  ${
+                        filter === item.slug ? "active" : ""
+                      }`}
                       data-bs-toggle="pill"
                     >
                       <span className="text-dark" style={{ width: "130px" }}>
@@ -255,13 +167,11 @@ const OrganicFruitsDisplay = () => {
                     </span>
                   </a>
                 </li>
-
               </ul>
             </div>
           </div>
 
           <div className="tab-content">
-
             <div id="tab-1" className="tab-pane fade show p-0 active">
               <div className="row g-4">
                 <div className="col-lg-12">
@@ -269,14 +179,12 @@ const OrganicFruitsDisplay = () => {
                     {filteredProducts.map((item) => (
                       <div key={item.id} className="col-md-6 col-lg-4 col-xl-3">
                         <div className="rounded position-relative fruite-item overflow-hidden border border-secondary">
-
                           <div className="fruite-img">
                             <img
                               src={item.img}
                               className="img-fluid w-100 h-100 rounded-top"
-                              style={{maxHeight: "280px", minHeight:"280px" }}
+                              style={{ maxHeight: "280px", minHeight: "280px" }}
                               alt=""
-                              
                             />
                           </div>
 
@@ -289,9 +197,7 @@ const OrganicFruitsDisplay = () => {
 
                           <div className="p-4 rounded-bottom">
                             <h4>{item.title}</h4>
-                            {/* <p>{item.description}</p> */}
                           </div>
-
                         </div>
                       </div>
                     ))}
@@ -299,7 +205,6 @@ const OrganicFruitsDisplay = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>

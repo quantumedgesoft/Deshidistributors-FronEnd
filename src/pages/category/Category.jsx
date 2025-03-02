@@ -1,11 +1,12 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay } from "swiper/modules";
+import { useLocation } from "react-router";
+import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
+import { useEffect } from "react";
 
-export default function VegetableSlidder() {
-  
+const Products = () => {
+  const { pathname } = useLocation();
+
+  const category = pathname?.split("/")[2];
+
   const products = [
     {
       id: 1,
@@ -105,61 +106,63 @@ export default function VegetableSlidder() {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [pathname]);
+
+
   return (
-    <>
-      <Swiper
-        spaceBetween={10}
-        slidesPerView={1}
-        centeredSlides={false}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={false}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
-        }}
-        navigation={false}
-        modules={[Autoplay]}
-        className=""
-      >
-        {products.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="border border-primary rounded position-relative vesitable-item" style={{maxHeight: "450px", minHeight: "450px"}}>
-              <div className="vesitable-img">
-                <img
-                  src={item.img}
-                  className="img-fluid w-100 rounded-top"
-                  style={{ maxHeight: "250px", minHeight: "250px" }}
-                  alt=""
-                />
-              </div>
-              <div
-                className="text-white bg-primary px-3 py-1 rounded position-absolute"
-                style={{ top: "10px", right: "10px" }}
-              >
-                Comming...
-              </div>
-              <div className="p-4 rounded-bottom">
-                <h4>{item.title}</h4>
-                <p>{item.description?.slice(0, 100)}...</p>
-              </div>
+    <div>
+      <PageRouteBanner PageName="Products" />
+
+      <div className="container py-5">
+        {/* Products Section */}
+        <div className="text-center mb-5">
+          <h1 className="display-5 fw-bold text-capitalize">{category}</h1>
+          <p className="lead text-muted mx-auto" style={{ maxWidth: "700px" }}>
+            Our products are sourced from Bangladesh, India, China, and beyond.
+            We provide the finest quality products at the best prices.
+          </p>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row g-4">
+          <div className="col-lg-12">
+            <div className="row g-4">
+              {products.map((item) => (
+                <div key={item.id} className="col-md-6 col-lg-4 col-xl-3">
+                  <div
+                    className="border border-primary rounded position-relative vesitable-item"
+                    style={{ maxHeight: "450px", minHeight: "450px" }}
+                  >
+                    <div className="vesitable-img">
+                      <img
+                        src={item.img}
+                        className="img-fluid w-100 rounded-top"
+                        style={{ maxHeight: "250px", minHeight: "250px" }}
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      className="text-white bg-primary px-3 py-1 rounded position-absolute"
+                      style={{ top: "10px", right: "10px" }}
+                    >
+                      Comming...
+                    </div>
+                    <div className="p-4 rounded-bottom">
+                      <h4>{item.title}</h4>
+                      <p>{item.description?.slice(0, 100)}...</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default Products;

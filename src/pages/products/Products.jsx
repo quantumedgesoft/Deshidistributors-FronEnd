@@ -1,4 +1,3 @@
-import React from 'react'
 import PageRouteBanner from './../../components/shared/pageRouteBanner/PageRouteBanner';
 import VegetableSlidder from '../../components/sliders/VegetableSlider';
 
@@ -6,6 +5,7 @@ const Products = () => {
   return (
     <div>
       <PageRouteBanner PageName="Products"/>
+
       <div className="container py-5">
         {/* Products Section */}
         <div className="text-center mb-5">
@@ -19,6 +19,7 @@ const Products = () => {
               <h1 className="mb-5">Soap</h1>
               <VegetableSlidder />
           </div>
+
           <div className="container py-5">
               <h1 className="mb-5">Tea, Coffee, Milk Drinks</h1>
               <VegetableSlidder />
