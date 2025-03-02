@@ -13,7 +13,7 @@ const FactsSection = () => {
               <div className="counter bg-white rounded p-5">
                 <FaUsers style={{fontSize:"70px"}}/>
                 <h5  className="text-secondary">Satisfied customer</h5>
-                <h1 className="text-primary">1963</h1>
+                <h1 className="text-primary">10k+</h1>
               </div>
             </div>
 
@@ -29,7 +29,7 @@ const FactsSection = () => {
               <div className="counter bg-white rounded p-5">
                 <GrCertificate style={{fontSize:"70px"}}/>
                 <h5 className="text-secondary">Quality certificates</h5>
-                <h1 className="text-primary">33</h1>
+                <h1 className="text-primary">33+</h1>
               </div>
             </div>
 
@@ -37,7 +37,7 @@ const FactsSection = () => {
               <div className="counter bg-white rounded p-5">
                 <BsMinecartLoaded style={{fontSize:"70px"}}/>
                 <h5 className="text-secondary">Available products</h5>
-                <h1 className="text-primary">789</h1>
+                <h1 className="text-primary">200+</h1>
               </div>
             </div>
           </div>

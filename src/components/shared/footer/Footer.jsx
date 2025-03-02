@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, Links } from "react-router";
 const Footer = () => {
   return (
     <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
@@ -39,12 +39,13 @@ const Footer = () => {
                   <i className="fab fa-twitter"></i>
                 </a>
 
-                <a
+                <Link
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
-                  href=""
+                  to="https://www.facebook.com/deshidistributors/"
+                  target="_blank"
                 >
                   <i className="fab fa-facebook-f"></i>
-                </a>
+                </Link>
 
                 <a
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
