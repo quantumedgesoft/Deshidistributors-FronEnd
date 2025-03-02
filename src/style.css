@@ -569,33 +569,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/img/icons/locationBg.svg");
+  /* background-image: url("/img/icons/locationBg.svg"); */
   height: 78px;
   width: 78px;
   background-size: cover;
   background-position: center;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 9999;
 }
 
 .choose-item .icon1 {
-  color: #000; /* Initial icon color */
+  color: #000;
   transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect for each individual choose-item */
-.LeftContent:hover .choose-item {
-  /* opacity: 0; */
-  transform: scale(0); /* Zoom out the background slowly */
+.choose-item:hover {
+  transform: scale(0);
 }
-
-/* Icon color change on hover */
 .choose-item:hover .icon1 {
-  color: #007bff; /* Change icon color */
+  transform: scale(1) !important;
 }
 
 .choose-item .icon1 {
-  color: red;
+  color: white;
   font-size: 50px;
+}
+
+.icon2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  color: orange;
+  opacity: 0.8;
+  font-size: 50px;
+  z-index: -1;
 }
 
 .LeftContent H4 {

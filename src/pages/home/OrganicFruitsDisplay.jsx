@@ -221,7 +221,7 @@ const OrganicFruitsDisplay = () => {
   const filteredProducts = filter === "all" ? products : filterted;
 
   return (
-    <div className="container-fluid fruite py-5">
+    <div className="container-flui fruite py-5">
       <div className="container py-5">
         <div className="tab-class text-center">
           <div className="row g-4">

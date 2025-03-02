@@ -1,7 +1,7 @@
 
 const FeaturesFruitsDisplay = () => {
   return (
-    <div className="container-fluid service py-5">
+    <div className="container-flui service py-5">
     <div className="container py-5">
         <div className="row g-4 justify-content-center">
             <div className="col-md-6 col-lg-4">
