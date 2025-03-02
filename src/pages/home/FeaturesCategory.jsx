@@ -33,7 +33,7 @@ const FeaturesCategory = () => {
   ];
 
   return (
-    <div className="container-fluid featurs">
+    <div className="container-flui featurs">
       <div className="container py-5">
         <div className="row g-4">
           {fetureOverviw.map((featureReview) => (

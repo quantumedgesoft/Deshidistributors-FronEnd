@@ -40,7 +40,7 @@ export default function TestimonialSlider() {
     <>
       <Swiper
         spaceBetween={30}
-        slidesPerView={2}
+        slidesPerView={1}
         centeredSlides={false}
         loop={true}
         autoplay={{
@@ -50,9 +50,23 @@ export default function TestimonialSlider() {
         pagination={false}
         navigation={false}
         modules={[Autoplay]}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        }}
         className=""
       >
-        {CustomerReview.map((review, index) => (
+        {CustomerReview.map((review) => (
           <SwiperSlide key={review.id}>
             <div className="testimonial-item img-border-radius bg-light rounded p-4">
               <div className="position-relative">

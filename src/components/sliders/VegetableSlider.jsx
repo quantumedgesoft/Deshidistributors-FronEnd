@@ -111,10 +111,10 @@ export default function VegetableSlidder() {
         slidesPerView={1}
         centeredSlides={false}
         loop={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={false}
         breakpoints={{
           640: {
