@@ -618,6 +618,7 @@
 @media screen and (max-width: 992px) {
   .WhyChooseUsContainer .centerImg {
     width: 100%;
+    overflow: hidden;
   }
 
   .LeftContent {
