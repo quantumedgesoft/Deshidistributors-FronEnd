@@ -548,14 +548,17 @@
 }
 
 /* Why Choose Us Section */
-
 .WhyChooseUsContainer {
   width: 100%;
 }
 
-.LeftContent,
-.RightContent {
+.LeftContent {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
 }
 
 .WhyChooseUsContainer .centerImg {
@@ -571,10 +574,27 @@
   width: 78px;
   background-size: cover;
   background-position: center;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.choose-item i {
-  color: white;
+.choose-item .icon1 {
+  color: #000; /* Initial icon color */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for each individual choose-item */
+.LeftContent:hover .choose-item {
+  /* opacity: 0; */
+  transform: scale(0); /* Zoom out the background slowly */
+}
+
+/* Icon color change on hover */
+.choose-item:hover .icon1 {
+  color: #007bff; /* Change icon color */
+}
+
+.choose-item .icon1 {
+  color: red;
   font-size: 50px;
 }
 
@@ -592,8 +612,7 @@
     width: 100%;
   }
 
-  .LeftContent,
-  .RightContent {
+  .LeftContent {
     width: 100%;
   }
 

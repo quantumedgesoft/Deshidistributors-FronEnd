@@ -92,18 +92,27 @@ const WhyChooseUs = () => {
         <h1 className="text-primary">Why Choose Us</h1>
 
         <div className="WhyChooseUsContainer d-flex flex-column flex-lg-row align-items-center gap-5 justify-content-between my-4">
-          {/* Left Content */}
-          <div className="LeftContent d-flex flex-column align-items-center gap-3">
+
+          <div className="LeftContent">
             {datas.slice(0, 3).map((item) => (
-              <div key={item.id} className="d-flex align-items-center gap-3">
+              <div
+                key={item.id}
+                className="d-flex align-items-center gap-3 border "
+              >
+                <div className="border position-relative">
+
                 <div className="choose-item">
-                  <i aria-hidden="true" className="fas fa-map-marker-alt"></i>
+                  <i aria-hidden="true" className="fas fa-map-marker-alt icon1"></i>
+                </div>
+                  <i aria-hidden="true" className="fas fa-map-marker-alt icon2 position-absolute fs-1" style={{left: "50%", top:"50%", translate:" -50% -50%"}}></i>
                 </div>
 
                 <div>
                   <h4 className="fw-bold p-0 m-0 text-primary">{item.title}</h4>
                   <p>{item.des}</p>
                 </div>
+
+
               </div>
             ))}
           </div>
