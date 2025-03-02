@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="container-fluid p-5">
+    <div className="container p-5">
       <div className="my-5 d-flex flex-column justify-content-center align-items-center">
         <h1 className="text-primary">Why Choose Us</h1>
 
