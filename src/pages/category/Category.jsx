@@ -107,6 +107,7 @@ const Products = () => {
   ];
 
   useEffect(() => {
+    
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -130,7 +131,9 @@ const Products = () => {
           <div className="col-lg-12">
             <div className="row g-4">
               {products.map((item) => (
+
                 <Link to={`/product-details/${item.id}`} key={item.id} className="col-md-6 col-lg-4 col-xl-3">
+
                   <div
                     className="border border-primary rounded position-relative vesitable-item"
                     style={{ maxHeight: "450px", minHeight: "450px" }}
@@ -154,7 +157,9 @@ const Products = () => {
                       <p>{item.description?.slice(0, 100)}...</p>
                     </div>
                   </div>
+
                 </Link>
+
               ))}
             </div>
           </div>

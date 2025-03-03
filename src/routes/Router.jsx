@@ -21,6 +21,8 @@ const Router = () => {
         <Route path="/products/:string" element={<Category />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
 
+     
+
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
       </Route>

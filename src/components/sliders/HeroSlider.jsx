@@ -1,59 +1,41 @@
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import axios from "axios";
 
 export default function HeroSlider() {
-  const sliderContent = [
-    {
-      id: 1,
-      title: "Spicy & Herbs",
-      img: "/img/slider/Spices_Herbs.png",
-    },
-    {
-      id: 2,
-      title: "Tea, Coffee, Milk",
-      img: "/img/slider/Tea_Coffee.png",
-    },
-    {
-      id: 3,
-      title: "Pickle",
-      img: "/img/products/Pickle.jpg",
-    },
-    {
-      id: 4,
-      title: "Sauce",
-      img: "/img/products/Sauce.jpg",
-    },
-    {
-      id: 5,
-      title: "Rice",
-      img: "/img/products/rice.jpg",
-    },
-    {
-      id: 6,
-      title: "Edible Oil",
-      img: "/img/slider/Edible_Oil.jpg",
-    },
-  ];
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const API_URL = import.meta.env.VITE_API_URL;
+    axios
+      .get(`${API_URL}/sliders/`)
+      .then((res) => {
+        const data = res.data;
+        setData(data.results);
+      })
+      .catch((error) => {
+        console.error("Error fetching slider data:", error);
+      });
+  }, []);
 
   return (
-    <>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={false}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="HeroSlider"
-      >
-        {sliderContent.map((item) => (
+    <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      loop={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={false}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="HeroSlider"
+    >
+      {data.map((item) => (
           <SwiperSlide key={item.id}>
             <div
               className="active rounded overflow-hidden"
@@ -61,7 +43,7 @@ export default function HeroSlider() {
                 position: "relative",
                 maxHeight: "280px",
                 minHeight: "280px",
-                backgroundImage: `url(${item.img})`,
+                backgroundImage: `url(${item.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -78,12 +60,11 @@ export default function HeroSlider() {
                     "linear-gradient(rgba(255, 181, 36, 0.7), rgba(255, 181, 36, 0.7))",
                 }}
               >
-                {item.title}
+                {item.name}
               </a>
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
-    </>
+    </Swiper>
   );
 }
