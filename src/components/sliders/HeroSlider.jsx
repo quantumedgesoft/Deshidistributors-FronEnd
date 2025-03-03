@@ -13,7 +13,8 @@ export default function HeroSlider() {
     axios
       .get(`${API_URL}/sliders/`)
       .then((res) => {
-        setData(res.data.results);
+        const data = res.data;
+        setData(data.results);
       })
       .catch((error) => {
         console.error("Error fetching slider data:", error);
@@ -64,7 +65,6 @@ export default function HeroSlider() {
             </div>
           </SwiperSlide>
         ))}
-      )
     </Swiper>
   );
 }
