@@ -3,11 +3,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import { useEffect, useState } from "react";
 
 export default function HeroSlider() {
-  // const [datas, setDatas] = useState([])
-
   const sliderContent = [
     {
       id: 1,
@@ -40,13 +37,6 @@ export default function HeroSlider() {
       img: "/img/slider/Edible_Oil.jpg",
     },
   ];
-
-  // useEffect(() => {
-  //   fetch("http://192.168.68.145:8000/sliders/")
-  //     .then((response) => response.json())
-  //     .then((json) => console.log(json));
-  // }, []);
-
 
   return (
     <>
