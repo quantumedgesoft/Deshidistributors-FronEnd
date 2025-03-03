@@ -1,3 +1,4 @@
+import BrandsSlider from "../../components/sliders/BrandsSlider";
 import Ads from "./Ads";
 import BannerOne from "./BannerOne";
 // import BestsellerProducts from "./BestselleProducts";
@@ -14,16 +15,17 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
+      <BrandsSlider />
       <FeaturesCategory />
       <OrganicFruitsDisplay />
       <FeaturesFruitsDisplay />
       <FeaturesVegetablesDisplay />
       <BannerOne />
       {/* <BestsellerProducts /> */}
-      <WhyChooseUs/>
-      <Ads/>
+      <WhyChooseUs />
+      <Ads />
       <FactsSection />
-      <Testimonial/>
+      <Testimonial />
     </div>
   );
 };
