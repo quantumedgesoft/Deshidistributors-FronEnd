@@ -33,7 +33,7 @@ export default function TestimonialSlider() {
       rating: 3,
     },
     {
-      id: 3,
+      id: 4,
       name: "Mohammed Abdur Rahman",
       Profession: "President_Cofounder",
       ImageUrl: '/img/owners/Mohammed Abdur Rahman_ Vice President_Cofounder.jpeg',
@@ -42,7 +42,7 @@ export default function TestimonialSlider() {
       rating: 2,
     },
     {
-      id: 3,
+      id: 5,
       name: "Iftekhairul Alam",
       Profession: "Cofounder",
       ImageUrl: '/img/owners/Iftekhairul Alam_ Cofounder.jpeg',
@@ -51,7 +51,7 @@ export default function TestimonialSlider() {
       rating: 3,
     },
     {
-      id: 3,
+      id: 6,
       name: "No name",
       Profession: "President_Cofounder",
       ImageUrl: "/src/assets/img/avatar.jpg",

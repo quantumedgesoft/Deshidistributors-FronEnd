@@ -23,7 +23,7 @@ export default function HeroSlider() {
       className="HeroSlider"
     >
       {data?.map((item) => (
-        <SwiperSlide key={item.id}>
+        <SwiperSlide key={item?.id}>
           {isLoading ? (
             <div
               className="rounded"
