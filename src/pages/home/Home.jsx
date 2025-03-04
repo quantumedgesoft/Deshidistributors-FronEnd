@@ -1,13 +1,13 @@
 import BrandsSlider from "../../components/sliders/BrandsSlider";
 import Ads from "./Ads";
 import BannerOne from "./BannerOne";
+import DiscountDisplay from "./DiscountDisplay";
 import FactsSection from "./FactsSection";
 import FeaturesCategory from "./FeaturesCategory";
-import FeaturesFruitsDisplay from "./FeaturesFruitsDisplay";
-import FeaturesVegetablesDisplay from "./FeaturesVegetablesDisplay";
 import HeroSection from "./HeroSection";
 import OurProduccts from "./OurProducts";
 import Testimonial from "./Testimonial";
+import UpcommingProducts from "./UpcommingProducts";
 import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () => {
@@ -18,8 +18,8 @@ const Home = () => {
       <Ads />
       <FeaturesCategory />
       <OurProduccts />
-      <FeaturesFruitsDisplay />
-      <FeaturesVegetablesDisplay />
+      <DiscountDisplay />
+      <UpcommingProducts />
       <BannerOne />
       <WhyChooseUs />
       <FactsSection />

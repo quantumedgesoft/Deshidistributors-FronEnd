@@ -1,5 +1,5 @@
 import PageRouteBanner from './../../components/shared/pageRouteBanner/PageRouteBanner';
-import VegetableSlidder from '../../components/sliders/VegetableSlider';
+import DiscountSlider from '../../components/sliders/DiscountSlider';
 
 const Products = () => {
   return (
@@ -17,16 +17,16 @@ const Products = () => {
           </div>
           <div className="container py-5">
               <h1 className="mb-5">Soap</h1>
-              <VegetableSlidder />
+              <DiscountSlider />
           </div>
 
           <div className="container py-5">
               <h1 className="mb-5">Tea, Coffee, Milk Drinks</h1>
-              <VegetableSlidder />
+              <DiscountSlider />
           </div>
           <div className="container py-5">
               <h1 className="mb-5">Dates</h1>
-              <VegetableSlidder />
+              <DiscountSlider />
           </div>
     </div>
   )

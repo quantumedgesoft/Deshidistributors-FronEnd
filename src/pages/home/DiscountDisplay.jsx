@@ -1,9 +1,8 @@
 import { Link } from "react-router";
 import useDataFetcher from "../../utils/FetchDatas";
 
-const FeaturesFruitsDisplay = () => {
+const DiscountDisplay = () => {
   const { data } = useDataFetcher("/discount-cards/");
-  console.log(data);
 
   return (
     <div className="container-flui service py-5">
@@ -71,4 +70,4 @@ const FeaturesFruitsDisplay = () => {
   );
 };
 
-export default FeaturesFruitsDisplay;
+export default DiscountDisplay;
