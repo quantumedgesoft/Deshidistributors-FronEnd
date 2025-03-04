@@ -1,21 +1,20 @@
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"; // Make sure Bootstrap CSS is imported
 import VegetableSlidder from "../../components/sliders/VegetableSlider";
 
 const ProductDetails = () => {
-  const [mainImage, setMainImage] = useState("/img/products/Edible Oil.jpg");
+  // const [mainImage, setMainImage] = useState("/img/products/Edible Oil.jpg");
 
   // Thumbnails data
-  const thumbnails = [
-    "/img/products/Biscuit.jpg",
-    "/img/products/Chanachur.png",
-    "/img/products/Dates.png",
-    "/img/products/Ghee.png",
-  ];
+  // const thumbnails = [
+  //   "/img/products/Biscuit.jpg",
+  //   "/img/products/Chanachur.png",
+  //   "/img/products/Dates.png",
+  //   "/img/products/Ghee.png",
+  // ];
 
-  const changeImage = (src) => {
-    setMainImage(src);
-  };
+  // const changeImage = (src) => {
+  //   setMainImage(src);
+  // };
 
   return (
     <div className="container mt-5">
@@ -24,12 +23,12 @@ const ProductDetails = () => {
           {/* Product Images */}
           <div className="col-md-6 mb-4">
             <img
-              src={mainImage}
+              src="/img/products/Edible Oil.jpg"
               alt="Product"
               className="img-fluid rounded mb-3 w-100 product-image"
               id="mainImage"
             />
-            <div className="d-flex justify-content-between px-lg-5">
+            {/* <div className="d-flex justify-content-between px-lg-5">
               {thumbnails.map((src, index) => (
                 <img
                   key={index}
@@ -42,7 +41,7 @@ const ProductDetails = () => {
                   style={{ cursor: "pointer" }}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Product Details */}
@@ -103,9 +102,9 @@ const ProductDetails = () => {
           {/* Related Products */}
           <section className="my-5">
             <div className="d-flex justify-content-center align-items-center">
-              <div className="bg-primary" style={{width: "30%", height:"2px"}}></div>
-              <h2 className="mb-3 text-primary text-center py-5"  style={{width: "30%"}}>Related Products</h2>
-              <div className="bg-primary" style={{width: "30%", height:"2px"}}></div>
+              <div className="bg-primary w-100" style={{ height:"2px"}}></div>
+              <h2 className="mb-3 text-primary text-center py-5 w-100 fs-2">Related Products</h2>
+              <div className="bg-primary w-100" style={{ height:"2px"}}></div>
             </div>
               <VegetableSlidder />
           </section>

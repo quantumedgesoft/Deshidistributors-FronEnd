@@ -1,25 +1,12 @@
-import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import axios from "axios";
+import useDataFetcher from "../../utils/FetchDatas";
 
 export default function HeroSlider() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const API_URL = import.meta.env.VITE_API_URL;
-    axios
-      .get(`${API_URL}/sliders/`)
-      .then((res) => {
-        const data = res.data;
-        setData(data.results);
-      })
-      .catch((error) => {
-        console.error("Error fetching slider data:", error);
-      });
-  }, []);
+  const { data, isLoading } = useDataFetcher("/sliders/");
 
   return (
     <Swiper
@@ -35,8 +22,14 @@ export default function HeroSlider() {
       modules={[Autoplay, Pagination, Navigation]}
       className="HeroSlider"
     >
-      {data.map((item) => (
-          <SwiperSlide key={item.id}>
+      {data?.map((item) => (
+        <SwiperSlide key={item.id}>
+          {isLoading ? (
+            <div
+              className="rounded"
+              style={{ height: "280px", backgroundColor: "gray" }}
+            ></div>
+          ) : (
             <div
               className="active rounded overflow-hidden"
               style={{
@@ -63,8 +56,9 @@ export default function HeroSlider() {
                 {item.name}
               </a>
             </div>
-          </SwiperSlide>
-        ))}
+          )}
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

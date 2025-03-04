@@ -107,7 +107,6 @@ const Products = () => {
   ];
 
   useEffect(() => {
-    
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -126,14 +125,16 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="container">
+      {/* <div className="container">
         <div className="row g-4">
           <div className="col-lg-12">
             <div className="row g-4">
               {products.map((item) => (
-
-                <Link to={`/product-details/${item.id}`} key={item.id} className="col-md-6 col-lg-4 col-xl-3">
-
+                <Link
+                  to={`/product-details/${item.id}`}
+                  key={item.id}
+                  className="col-md-6 col-lg-4 col-xl-3"
+                >
                   <div
                     className="border border-primary rounded position-relative vesitable-item"
                     style={{ maxHeight: "450px", minHeight: "450px" }}
@@ -150,17 +151,59 @@ const Products = () => {
                       className="text-white bg-primary px-3 py-1 rounded position-absolute"
                       style={{ top: "10px", right: "10px" }}
                     >
-                      Comming...
+                      Latest
                     </div>
-                    <div className="p-4 rounded-bottom">
+                    <div className="p-4 rounded-bottom text-gray">
                       <h4>{item.title}</h4>
-                      <p>{item.description?.slice(0, 100)}...</p>
+                      <p className="text-dark text-justify">{item.description?.slice(0, 100)}...</p>
                     </div>
                   </div>
-
                 </Link>
-
               ))}
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="container fruite pb-5">
+        <div className="tab-class">
+          <div className="tab-content">
+            <div id="tab-1" className="tab-pane fade show p-0 active">
+              <div className="row g-4">
+                <div className="col-lg-12">
+                  <div className="row g-4">
+                    {products.map((item) => (
+                      <Link to={`/product-details/${item.id}`} key={item.id} className="col-md-6 col-lg-4 col-xl-3">
+                        <div className="rounded position-relative fruite-item overflow-hidden border border-secondary">
+                          <div className="fruite-img">
+                            <img
+                              src={item.img}
+                              className="img-fluid w-100 h-100 rounded-top"
+                              style={{
+                                maxHeight: "280px",
+                                minHeight: "280px",
+                              }}
+                              alt=""
+                            />
+                          </div>
+
+                          <div
+                            className="text-white bg-primary px-3 py-1 rounded position-absolute text-capitalize"
+                            style={{ top: "10px", left: "10px" }}
+                          >
+                            {item.category}
+                          </div>
+
+                          <div className="p-4 rounded-bottom">
+                            <h4>{item.title}</h4>
+                            <p className="text-dark">{item.description?.slice(0, 100)}...</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

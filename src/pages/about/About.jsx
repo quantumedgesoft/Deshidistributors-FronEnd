@@ -1,4 +1,3 @@
-import React from "react";
 import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
 
 const About = () => {
