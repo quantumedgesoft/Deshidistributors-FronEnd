@@ -4,9 +4,10 @@ import logo from "../../assets/Images/deshidistributors_logo.png";
 
 const Navbar = () => {
   const menuItems = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "About", link: "/about" },
     {
+      id: 3,
       name: "Products",
       link: "/products",
       dropdown: true,
@@ -36,8 +37,8 @@ const Navbar = () => {
         "Rice",
       ],
     },
-    { name: "Organic", link: "/organic" },
-    { name: "Operation Map", link: "/about" },
+    { id: 5, name: "Operation Map", link: "/about" },
+    { id: 6, name: "Career", link: "/career" },
   ];
 
   return (
@@ -70,9 +71,9 @@ const Navbar = () => {
               id="navbarCollapse"
             >
               <div className="navbar-nav mx-auto">
-                {menuItems.map((item, idx) =>
+                {menuItems.map((item) =>
                   item.dropdown ? (
-                    <div className="nav-item dropdown" key={idx}>
+                    <div className="nav-item dropdown" key={item.id}>
                       <Link
                         to={item.link}
                         className="nav-link dropdown-toggle"
@@ -102,7 +103,7 @@ const Navbar = () => {
                     </div>
                   ) : (
                     <Link
-                      key={idx}
+                    key={item.id}
                       to={item.link}
                       className="nav-item nav-link"
                     >

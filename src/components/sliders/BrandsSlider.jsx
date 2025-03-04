@@ -44,7 +44,7 @@ export default function BrandsSlider() {
       title: "Rice",
       description:
         "Sourced from the finest fields, our rice offers a fragrant aroma and soft texture, perfect for any dish. Available in Basmati, Jasmine, and Sona Masoori varieties.",
-      img: "/img/brands/hawor.jpg",
+      img: "/img/brands/ck.jpg",
     },
     {
       id: 6,
