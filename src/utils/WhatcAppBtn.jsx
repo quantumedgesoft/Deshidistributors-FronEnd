@@ -7,7 +7,7 @@ function WhatcAppBtn() {
       <Link to="https://web.whatsapp.com/" target="_blank">
         <button className="WhatcAppBtn">
           <FaWhatsapp />
-        </button>
+        </button>      
       </Link>
     </>
   );
