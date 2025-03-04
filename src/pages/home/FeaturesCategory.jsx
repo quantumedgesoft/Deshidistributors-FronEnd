@@ -32,6 +32,8 @@ const FeaturesCategory = () => {
     },
   ];
 
+  
+
   return (
     <div className="container-flui featurs">
       <div className="container py-5">

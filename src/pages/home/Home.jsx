@@ -6,7 +6,7 @@ import FeaturesCategory from "./FeaturesCategory";
 import FeaturesFruitsDisplay from "./FeaturesFruitsDisplay";
 import FeaturesVegetablesDisplay from "./FeaturesVegetablesDisplay";
 import HeroSection from "./HeroSection";
-import OrganicFruitsDisplay from "./OrganicFruitsDisplay";
+import OurProduccts from "./OurProducts";
 import Testimonial from "./Testimonial";
 import WhyChooseUs from "./WhyChooseUs";
 
@@ -15,13 +15,13 @@ const Home = () => {
     <div>
       <HeroSection />
       <BrandsSlider />
+      <Ads />
       <FeaturesCategory />
-      <OrganicFruitsDisplay />
+      <OurProduccts />
       <FeaturesFruitsDisplay />
       <FeaturesVegetablesDisplay />
       <BannerOne />
       <WhyChooseUs />
-      <Ads />
       <FactsSection />
       <Testimonial />
     </div>
