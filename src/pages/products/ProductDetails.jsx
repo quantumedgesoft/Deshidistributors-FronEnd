@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Make sure Bootstrap CSS is imported
-import VegetableSlidder from "../../components/sliders/VegetableSlider";
+import DiscountSlider from "../../components/sliders/DiscountSlider";
 
 const ProductDetails = () => {
   // const [mainImage, setMainImage] = useState("/img/products/Edible Oil.jpg");
@@ -106,7 +106,7 @@ const ProductDetails = () => {
               <h2 className="mb-3 text-primary text-center py-5 w-100 fs-2">Related Products</h2>
               <div className="bg-primary w-100" style={{ height:"2px"}}></div>
             </div>
-              <VegetableSlidder />
+              <DiscountSlider />
           </section>
         </div>
       </div>
