@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import Topbar from "./Topbar";
 import logo from "../../assets/Images/deshidistributors_logo.png";
+import useDataFetcher from "../../utils/FetchDatas";
 
 const Navbar = () => {
+  const {data} = useDataFetcher("/site-content/");
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "About", link: "/about" },
@@ -50,7 +52,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="navbar-brand">
               <img
-                src={logo}
+                src={data?.data?.main_logo || logo}
                 alt="Deshi Distributors"
                 style={{ width: "150px" }}
               />
