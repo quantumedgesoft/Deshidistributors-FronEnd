@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import useDataFetcher from "../../../utils/FetchDatas";
 const Footer = () => {
   const {data} = useDataFetcher("/site-content/");
+  console.log(data?.data?.address);
   return (
     <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
       <div className="container py-5">
@@ -12,7 +13,7 @@ const Footer = () => {
           <div className="row g-4">
             <div className="col-lg-3">
               <a href="#">
-                  <img className="w-50" src="/img/logo_light.png" alt="" />
+                  <img className="w-50" src={data?.data?.secondary_logo} alt="logo" />
               </a>
             </div>
             <div className="col-lg-6">
@@ -36,7 +37,7 @@ const Footer = () => {
 
                 <Link
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
-                  to={data?.data?.twitter}
+                  to={data?.data?.linkedin}
                   target="_blank"
                 >
                   <i className="fab fa-twitter"></i>
@@ -123,7 +124,6 @@ const Footer = () => {
               <p>Address: {data?.data?.address}</p>
               <p>Email: {data?.data?.email}</p>
               <p>Phone: {data?.data?.phone}</p>
-              <img src={data?.data?.secondary_logo} className="img-fluid" alt="" />
             </div>
           </div>
         </div>
