@@ -89,10 +89,10 @@ const Footer = () => {
               <Link className="btn-link" to="/terms-of-use">
                 Terms & Condition
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/return-policy">
                 Return Policy
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/faq">
                 FAQs & Help
               </Link>
             </div>

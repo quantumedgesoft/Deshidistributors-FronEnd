@@ -39,7 +39,7 @@ const Navbar = () => {
         "Rice",
       ],
     },
-    { id: 5, name: "Operation Map", link: "/about" },
+    { id: 5, name: "Operation Map", link: "/contact" },
     { id: 6, name: "Career", link: "/career" },
   ];
 
