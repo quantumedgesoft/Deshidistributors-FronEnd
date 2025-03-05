@@ -31,11 +31,13 @@ const OurProduccts = () => {
     },
   ];
 
-  const filterted = data?.filter(
-    (item) => item?.tags?.title.toLowerCase() === filter
+  const filtered = data?.filter(
+    (item) => item?.tags?.title.toLowerCase() === (filter === "all" ? ["popular", "best sale", "recent"] : filter)
   );
 
-  const filteredProducts = filter === "all" ? data : filterted;
+console.log(filtered);
+
+  const filteredProducts = filter === "all" ? data : filtered;
 
   return (
     <div className="container-flui fruite py-5">

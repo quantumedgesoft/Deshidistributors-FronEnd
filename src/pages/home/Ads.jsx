@@ -1,4 +1,3 @@
-import React from "react";
 import useDataFetcher from "./../../utils/FetchDatas";
 const Ads = () => {
   const { data } = useDataFetcher("/site-content/");
