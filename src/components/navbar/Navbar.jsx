@@ -5,6 +5,7 @@ import useDataFetcher from "../../utils/FetchDatas";
 
 const Navbar = () => {
   const { data } = useDataFetcher("/site-content/");
+  
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "About", link: "/about" },

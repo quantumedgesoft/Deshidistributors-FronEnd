@@ -1,10 +1,24 @@
-import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 
 const TermsOfUse = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
+
   return (
-    <section className="container py-5 bg-gradient-to-b" style={{marginTop: "150px"}}>
+    <section
+      className="container py-5 bg-gradient-to-b"
+      style={{ marginTop: "150px" }}
+    >
       <div className="max-w-4xl mx-auto bg-white p-10 shadow-2xl rounded-2xl border-gray-200">
-        <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-4">Terms of Use</h1>
+        <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-4">
+          Terms of Use
+        </h1>
 
         {[
           {
@@ -33,7 +47,9 @@ const TermsOfUse = () => {
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 <li>Unauthorized access to other accounts or data.</li>
                 <li>Distributing harmful or malicious content.</li>
-                <li>Using automated systems (bots, scrapers) without permission.</li>
+                <li>
+                  Using automated systems (bots, scrapers) without permission.
+                </li>
               </ul>
             ),
           },
@@ -69,7 +85,9 @@ const TermsOfUse = () => {
           },
         ].map((section, index) => (
           <section key={index} className="mb-8">
-            <h2 className="text-2xl font-bold mb-3 text-gray-900">{section.title}</h2>
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">
+              {section.title}
+            </h2>
             <p className="text-gray-700">{section.content}</p>
             {index !== 7 && <hr className="my-6 border-gray-300" />}
           </section>

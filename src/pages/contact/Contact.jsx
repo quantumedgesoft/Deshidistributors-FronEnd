@@ -1,9 +1,12 @@
 import { useForm } from "react-hook-form";
 import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
 import useDataFetcher from "../../utils/FetchDatas";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 
 const Contact = () => {
   const { data } = useDataFetcher("/site-content/");
+  const { pathname } = useLocation();
 
   const {
     register,
@@ -11,6 +14,13 @@ const Contact = () => {
     formState: { errors },
     reset,
   } = useForm();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
 
   const onSubmit = (data) => {
     console.log("Form Submitted:", data);

@@ -1,7 +1,17 @@
-import React from "react";
+import { useEffect } from "react";
 import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
+import { useLocation } from "react-router";
 
 const FAQsHelp = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
+
   const faqs = [
     {
       question: "How can I place an order?",
@@ -37,39 +47,42 @@ const FAQsHelp = () => {
 
   return (
     <>
-    <PageRouteBanner PageName="FAQ"/>
-    <div className="container py-5">
-      <h2 className="mb-4 text-center">FAQs & Help</h2>
-      <div className="accordion" id="faqsAccordion">
-        {faqs.map((faq, index) => (
-          <div className="accordion-item" key={index}>
-            <h2 className="accordion-header" id={`heading${index}`}>
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target={`#collapse${index}`}
-                aria-expanded="false"
-                aria-controls={`collapse${index}`}
+      <PageRouteBanner PageName="FAQ" />
+      <div className="container py-5">
+        <h2 className="mb-4 text-center">FAQs & Help</h2>
+        <div className="accordion" id="faqsAccordion">
+          {faqs.map((faq, index) => (
+            <div className="accordion-item" key={index}>
+              <h2 className="accordion-header" id={`heading${index}`}>
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target={`#collapse${index}`}
+                  aria-expanded="false"
+                  aria-controls={`collapse${index}`}
+                >
+                  {faq.question}
+                </button>
+              </h2>
+              <div
+                id={`collapse${index}`}
+                className="accordion-collapse collapse"
+                aria-labelledby={`heading${index}`}
+                data-bs-parent="#faqsAccordion"
               >
-                {faq.question}
-              </button>
-            </h2>
-            <div
-              id={`collapse${index}`}
-              className="accordion-collapse collapse"
-              aria-labelledby={`heading${index}`}
-              data-bs-parent="#faqsAccordion"
-            >
-              <div className="accordion-body">{faq.answer}</div>
+                <div className="accordion-body">{faq.answer}</div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <h3 className="mt-5">Need More Help?</h3>
-      <p>If your question isn't listed here, feel free to <a href="/contact">contact us</a> for assistance.</p>
-    </div>
+        <h3 className="mt-5">Need More Help?</h3>
+        <p>
+          If your question isn&apos;t listed here, feel free to{" "}
+          <a href="/contact">contact us</a> for assistance.
+        </p>
+      </div>
     </>
   );
 };
