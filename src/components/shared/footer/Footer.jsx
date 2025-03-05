@@ -1,5 +1,8 @@
-import { Link, Links } from "react-router";
+import { Link } from "react-router";
+import useDataFetcher from "../../../utils/FetchDatas";
 const Footer = () => {
+  const {data} = useDataFetcher("/site-content/");
+  console.log(data?.data?.address);
   return (
     <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
       <div className="container py-5">
@@ -32,34 +35,37 @@ const Footer = () => {
             <div className="col-lg-3">
               <div className="d-flex justify-content-end pt-3">
 
-                <a
+                <Link
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
-                  href=""
+                  to={data?.data?.twitter}
+                  target="_blank"
                 >
                   <i className="fab fa-twitter"></i>
-                </a>
+                </Link>
 
                 <Link
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
-                  to="https://www.facebook.com/deshidistributors/"
+                  to={data?.data?.facebook}
                   target="_blank"
                 >
                   <i className="fab fa-facebook-f"></i>
                 </Link>
 
-                <a
+                <Link
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
-                  href=""
+                  to={data?.data?.youtube}
+                  target="_blank"
                 >
                   <i className="fab fa-youtube"></i>
-                </a>
+                </Link>
 
-                <a
+                <Link
                   className="border border-primary btn-outline-primary btn-md-square rounded-circle"
-                  href=""
+                  to={data?.data?.linkedin}
+                  target="_blank"
                 >
                   <i className="fab fa-linkedin-in"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -75,13 +81,13 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="d-flex flex-column text-start footer-item">
               <h4 className="text-light mb-3">Info</h4>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/about">
                 About Us
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/privacy-policy">
                 Privacy Policy
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/terms-of-use">
                 Terms & Condition
               </Link>
               <Link className="btn-link" to="">
@@ -95,19 +101,19 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="d-flex flex-column text-start footer-item">
               <h4 className="text-light mb-3">Popular Service</h4>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/products">
               Rice
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/products">
               Spices & Herbs
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/products">
               Tea, Coffee, Milk Drinks
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/products">
               Healthcare & Beauty
               </Link>
-              <Link className="btn-link" to="">
+              <Link className="btn-link" to="/products">
               Miscellaneous
               </Link>
             </div>
@@ -115,10 +121,10 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
               <h4 className="text-light mb-3">Contact</h4>
-              <p>Address: 123 Street, New York</p>
-              <p>Email:info@Deshidistributors.com</p>
-              <p>Phone: +0123 4567 8910</p>
-              <img src="img/payment.png" className="img-fluid" alt="" />
+              <p>Address: {data?.data?.address}</p>
+              <p>Email: {data?.data?.email}</p>
+              <p>Phone: {data?.data?.phone}</p>
+              <img src={data?.data?.secondary_logo} className="img-fluid" alt="" />
             </div>
           </div>
         </div>
