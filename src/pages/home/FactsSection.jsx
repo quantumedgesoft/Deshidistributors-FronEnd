@@ -2,32 +2,36 @@ import { BsMinecartLoaded } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa6";
 import { GrCertificate } from "react-icons/gr";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import useDataFetcher from "../../utils/FetchDatas";
 
 const FactsSection = () => {
+  const { data } = useDataFetcher("/site-content/");
+  console.log(data?.data?.satisfied_customer_count);
+
   const facts = [
     {
       id: 1,
       icon: <FaUsers style={{ fontSize: "70px" }} />,
       title: "Satisfied Customers",
-      count: "10k+",
+      count: `${data?.data?.satisfied_customer_count}+`,
     },
     {
       id: 2,
       icon: <RiCustomerService2Fill style={{ fontSize: "70px" }} />,
       title: "Quality of Service",
-      count: "99%",
+      count: `${data?.data?.quality_service_count}%`,
     },
     {
       id: 3,
       icon: <GrCertificate style={{ fontSize: "70px" }} />,
       title: "Quality Certificates",
-      count: "33+",
+      count: `${data?.data?.quality_certificate_count}+`,
     },
     {
       id: 4,
       icon: <BsMinecartLoaded style={{ fontSize: "70px" }} />,
       title: "Available Products",
-      count: "200+",
+      count: `${data?.data?.available_product_count}+`,
     },
   ];
 

@@ -3,9 +3,10 @@ import useDataFetcher from "../../utils/FetchDatas";
 
 const DiscountDisplay = () => {
   const { data } = useDataFetcher("/discount-cards/");
+  console.log(data)
 
   return (
-    <div className="container-flui service py-5">
+    <div className="container-flui service py-">
       <div className="container py-5">
         <div className="row g-4 justify-content-center">
           <div className="col-md-6 col-lg-4">
@@ -20,7 +21,7 @@ const DiscountDisplay = () => {
                 <div className="px-4 rounded-bottom">
                   <div className="service-content bg-primary text-center p-4 rounded">
                     <h5 className="text-white">{data[0]?.title}</h5>
-                    <h3 className="mb-0">{data[0]?.offer}</h3>
+                    {/* <h3 className="mb-0">{data[0]?.offer}</h3> */}
                   </div>
                 </div>
               </div>
@@ -39,7 +40,7 @@ const DiscountDisplay = () => {
                 <div className="px-4 rounded-bottom">
                   <div className="service-content bg-light text-center p-4 rounded">
                     <h5 className="text-primary">{data[1]?.title}</h5>
-                    <h3 className="mb-0">{data[1]?.offer}</h3>
+                    {/* <h3 className="mb-0">{data[1]?.offer}</h3> */}
                   </div>
                 </div>
               </div>
@@ -58,7 +59,7 @@ const DiscountDisplay = () => {
                 <div className="px-4 rounded-bottom">
                   <div className="service-content bg-secondary text-center p-4 rounded">
                     <h5 className="text-white">{data[2]?.title}</h5>
-                    <h3 className="mb-0">{data[0]?.offer}</h3>
+                    {/* <h3 className="mb-0">{data[0]?.offer}</h3> */}
                   </div>
                 </div>
               </div>

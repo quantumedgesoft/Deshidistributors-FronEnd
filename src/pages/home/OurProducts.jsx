@@ -87,7 +87,8 @@ const OurProduccts = () => {
                       <CardLoader />
                     ) : (
                       filteredProducts?.map((item) => (
-                        <div
+                        <Link
+                          to={`/product-details/${item?.id}`}
                           key={item.id}
                           className="col-md-6 col-lg-4 col-xl-3"
                         >
@@ -117,7 +118,7 @@ const OurProduccts = () => {
                               <h5>{item?.title}</h5>
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       ))
                     )}
                   </div>

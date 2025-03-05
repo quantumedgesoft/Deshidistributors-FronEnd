@@ -686,6 +686,9 @@
   box-shadow: "0 4px 6px rgba(0, 0, 0, 0.1)";
   font-size: 30px;
   z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .WhatcAppBtn:hover {
@@ -707,9 +710,41 @@
   cursor: pointer;
   box-shadow: "0 4px 6px rgba(0, 0, 0, 0.1)";
   font-size: 20px;
+  z-index: 999;
 }
 
 .ScrollToTopButton:hover {
   background-color: #619207;
   transition: all 0.2s ease-in-out;
+}
+
+/* Brand Slider */
+.BrandsSliderCont .BrandsSlider {
+  height: 80px;
+}
+
+/* Testimonial Sliders */
+.testimonial-item h4 {
+  font-size: 30px;
+}
+
+.testimonial-item img {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 992px) {
+  .BrandsSliderCont .BrandsSlider {
+    height: 120px;
+  }
+
+  .testimonial-item h4 {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  .testimonial-item img {
+    width: 100%;
+    height: 150px;
+  }
 }

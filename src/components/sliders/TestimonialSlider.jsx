@@ -3,63 +3,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
+import useDataFetcher from "../../utils/FetchDatas";
+
 export default function TestimonialSlider() {
-  const CustomerReview = [
-    {
-      id: 1,
-      name: "Harpoon Load",
-      Profession: "Employee",
-      ImageUrl: "/src/assets/img/testimonial-1.jpg",
-      reviewText:
-        "Excellent quality products! The packaging was great, and the delivery was fast. Highly recommend!",
-      rating: 5,
-    },
-    {
-      id: 2,
-      name: "MOHAMMAD ALAMGIR KABIR",
-      Profession: "Cofounder",
-      ImageUrl: '/img/owners/MOHAMMAD ALAMGIR KABIR_ Cofounder.jpeg',
-      reviewText:
-        "Great experience! The quality of service was top-notch. Highly recommended!",
-      rating: 4,
-    },
-    {
-      id: 3,
-      name: "md kamruzzamann",
-      Profession: "CEO_Cofounder",
-      ImageUrl: '/img/owners/mdkamruzzamann.jpeg',
-      reviewText:
-        "Fantastic work! Really satisfied with the professionalism and expertise.",
-      rating: 3,
-    },
-    {
-      id: 4,
-      name: "Mohammed Abdur Rahman",
-      Profession: "President_Cofounder",
-      ImageUrl: '/img/owners/Mohammed Abdur Rahman_ Vice President_Cofounder.jpeg',
-      reviewText:
-        "Good product, but shipping took a little longer than expected. Still, very satisfied!",
-      rating: 2,
-    },
-    {
-      id: 5,
-      name: "Iftekhairul Alam",
-      Profession: "Cofounder",
-      ImageUrl: '/img/owners/Iftekhairul Alam_ Cofounder.jpeg',
-      reviewText:
-        "Loved the pistachios! Very fresh and tasty. Just wish there were more discounts.",
-      rating: 3,
-    },
-    {
-      id: 6,
-      name: "No name",
-      Profession: "President_Cofounder",
-      ImageUrl: "/src/assets/img/avatar.jpg",
-      reviewText:
-        "Good product, but shipping took a little longer than expected. Still, very satisfied!",
-      rating: 1
-    },
-  ];
+  const { data } = useDataFetcher("/our-testimonials/");
+
+  console.log(data);
+
 
   return (
     <>
@@ -68,10 +18,10 @@ export default function TestimonialSlider() {
         slidesPerView={1}
         centeredSlides={false}
         loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={false}
         navigation={false}
         modules={[Autoplay]}
@@ -91,8 +41,8 @@ export default function TestimonialSlider() {
         }}
         className=""
       >
-        {CustomerReview.map((review) => (
-          <SwiperSlide key={review.id}>
+        {data?.map((review) => (
+          <SwiperSlide key={review?.id}>
             <div className="testimonial-item img-border-radius bg-light rounded p-4">
               <div className="position-relative">
                 <i
@@ -100,27 +50,30 @@ export default function TestimonialSlider() {
                   style={{ bottom: "30px", right: "0" }}
                 ></i>
                 <div className="mb-4 pb-4 border-bottom border-secondary">
-                  <p className="mb-0">{review.reviewText}</p>
+                  <p className="mb-0">{review?.review}</p>
                 </div>
-                <div className="d-flex align-items-center flex-nowrap">
+                <div className="d-flex flex-column flex-lg-row align-items-center flex-nowrap">
                   <div className="bg-secondary rounded">
                     <img
-                      src={review.ImageUrl}
+                      src={review?.picture}
                       className="img-fluid rounded"
-                      style={{ width: "100px", height: "100px" }}
                       alt=""
                     />
                   </div>
+
                   <div className="ms-4 d-block">
-                    <h4 className="text-dark">{review.name}</h4>
-                    <p className="m-0 pb-3">{review.Profession}</p>
+                    <h4 className="text-dark">{review?.name}</h4>
+                    <p className="m-0 pb-3">{review?.designation}</p>
                     <div className="d-flex pe-5">
-                      {[...Array(review.rating)].map((_, i) => (
+
+                      {[...Array(Number(review?.rating))].map((rating, i) => (
                         <i key={i} className="fas fa-star text-secondary"></i>
                       ))}
-                      {[...Array(5 - review.rating)].map((_, i) => (
+
+                      {[...Array( 5 - Number(review?.rating))].map((_, i) => (
                         <i key={i} className="fas fa-star "></i>
                       ))}
+
                     </div>
                   </div>
                 </div>

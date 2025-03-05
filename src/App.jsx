@@ -5,7 +5,7 @@ import WhatcAppBtn from "./utils/WhatcAppBtn";
 const App = () => {
   return (
     <>
-    <WhatcAppBtn/>
+      <WhatcAppBtn />
       <ScrollToTopButton />
       <PrimaryLayout />;
     </>
