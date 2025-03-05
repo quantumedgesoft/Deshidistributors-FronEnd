@@ -8,9 +8,6 @@ import useDataFetcher from "../../utils/FetchDatas";
 export default function TestimonialSlider() {
   const { data } = useDataFetcher("/our-testimonials/");
 
-  console.log(data);
-
-
   return (
     <>
       <Swiper
@@ -18,10 +15,10 @@ export default function TestimonialSlider() {
         slidesPerView={1}
         centeredSlides={false}
         loop={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={false}
         navigation={false}
         modules={[Autoplay]}
@@ -65,15 +62,13 @@ export default function TestimonialSlider() {
                     <h4 className="text-dark">{review?.name}</h4>
                     <p className="m-0 pb-3">{review?.designation}</p>
                     <div className="d-flex pe-5">
-
                       {[...Array(Number(review?.rating))].map((rating, i) => (
                         <i key={i} className="fas fa-star text-secondary"></i>
                       ))}
 
-                      {[...Array( 5 - Number(review?.rating))].map((_, i) => (
+                      {[...Array(5 - Number(review?.rating))].map((_, i) => (
                         <i key={i} className="fas fa-star "></i>
                       ))}
-
                     </div>
                   </div>
                 </div>

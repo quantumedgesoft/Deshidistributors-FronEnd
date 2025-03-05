@@ -1,6 +1,10 @@
 import "./Loader.css";
 const Loader = () => {
-  return <span className="loader"></span>;
+  return (
+    <div className="loader">
+      <img src="/src/assets/Images/deshidistributors_logo.png" alt="Logo" className="loader-logo" />
+    </div>
+  );
 };
 
 export default Loader;
