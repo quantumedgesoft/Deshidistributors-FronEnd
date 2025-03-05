@@ -6,8 +6,6 @@ import useDataFetcher from "../../utils/FetchDatas";
 
 const FactsSection = () => {
   const { data } = useDataFetcher("/site-content/");
-  console.log(data?.data?.satisfied_customer_count);
-
   const facts = [
     {
       id: 1,
