@@ -8,6 +8,9 @@ import TermsOfUse from "../pages/termsOfUse/TermsOfUse";
 import Products from "../pages/products/Products";
 import Category from "../pages/category/Category";
 import ProductDetails from "../pages/products/ProductDetails";
+import Career from "../pages/career/Career";
+import ReturnPolicy from "../pages/returnPolicy/ReturnPolicy";
+import FAQsHelp from "../pages/faqshelp/FAQsHelp";
 
 const Router = () => {
   return (
@@ -25,6 +28,9 @@ const Router = () => {
 
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
+        <Route path="/faq" element={<FAQsHelp />} />
       </Route>
     </Routes>
   );
