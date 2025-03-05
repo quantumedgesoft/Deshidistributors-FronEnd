@@ -108,7 +108,7 @@ const About = () => {
                 <div className="flex-grow-1">
                   <h3 className="h5 fw-bold">{leader.title}</h3>
                   <h4 className="text-muted">{leader.name}, {leader.position}</h4>
-                  <p className="fst-italic mt-2">"{leader.message}"</p>
+                  <p className="fst-italic mt-2">{leader.message}</p>
                 </div>
               </div>
             </div>

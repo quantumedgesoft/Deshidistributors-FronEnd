@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import useDataFetcher from "../../../utils/FetchDatas";
 const Footer = () => {
   const {data} = useDataFetcher("/site-content/");
-  console.log(data?.data?.address);
   return (
     <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
       <div className="container py-5">
@@ -13,7 +12,7 @@ const Footer = () => {
           <div className="row g-4">
             <div className="col-lg-3">
               <a href="#">
-                  <img className="w-50" src={data?.data?.secondary_logo} alt="logo" />
+                  <img className="w-50" src="/img/logo_light.png" alt="logo" />
               </a>
             </div>
             <div className="col-lg-6">
@@ -74,7 +73,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
               <h4 className="text-light mb-3">Why People Like us!</h4>
-              <p className="mb-4">rusted quality, authentic products, and seamless service Deshi Distributors brings you the best of Asia with reliability and passion!
+              <p className="mb-4">{data?.data?.company_details}
               </p>
             </div>
           </div>
