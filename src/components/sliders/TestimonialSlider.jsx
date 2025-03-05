@@ -7,10 +7,6 @@ import useDataFetcher from "../../utils/FetchDatas";
 
 export default function TestimonialSlider() {
   const { data } = useDataFetcher("/our-testimonials/");
-
-  console.log(data);
-
-
   return (
     <>
       <Swiper

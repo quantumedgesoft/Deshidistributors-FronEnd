@@ -3,8 +3,6 @@ import useDataFetcher from "../../utils/FetchDatas";
 
 const DiscountDisplay = () => {
   const { data } = useDataFetcher("/discount-cards/");
-  console.log(data)
-
   return (
     <div className="container-flui service py-">
       <div className="container py-5">
