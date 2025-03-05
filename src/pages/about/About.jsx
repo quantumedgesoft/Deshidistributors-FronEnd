@@ -1,9 +1,18 @@
-import React from "react";
 import useDataFetcher from "../../utils/FetchDatas";
 import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
 
 const About = () => {
-  const {data} = useDataFetcher("/team/");
+  const { pathname } = useLocation();
+  const { data } = useDataFetcher("/team/");
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
   return (
     <div>
       <PageRouteBanner PageName="About" />
@@ -33,8 +42,7 @@ const About = () => {
           <h2 className="fw-bold">What We Do?</h2>
           <p className="fs-5">
             We import, export, and distribute high-quality food products from
-            Asiimport useDataFetcher from './../../utils/FetchDatas';
-a, delivering the joy of authentic flavors to our customers with
+            Asi a, delivering the joy of authentic flavors to our customers with
             consistency and reliability.
           </p>
         </div>
@@ -59,12 +67,18 @@ a, delivering the joy of authentic flavors to our customers with
                   src={leader.picture}
                   alt={leader.name}
                   className="rounded-circle border border-3 border-primary mb-3"
-                  style={{ width: "120px", height: "120px", objectFit: "cover" }}
+                  style={{
+                    width: "120px",
+                    height: "120px",
+                    objectFit: "cover",
+                  }}
                 />
                 <div className="flex-grow-1">
                   <h3 className="h5 fw-bold">{leader.designation}’s Message</h3>
-                  <h4 className="text-muted">{leader.name}, {leader.designation}</h4>
-                  <p className="fst-italic mt-2">"{leader.message}"</p>
+                  <h4 className="text-muted">
+                    {leader.name}, {leader.designation}
+                  </h4>
+                  <p className="fst-italic mt-2">{`"${leader.message}"`}</p>
                 </div>
               </div>
             </div>
