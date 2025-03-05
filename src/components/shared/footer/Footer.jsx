@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import useDataFetcher from "../../../utils/FetchDatas";
 const Footer = () => {
   const {data} = useDataFetcher("/site-content/");
-  console.log(data?.data?.address);
   return (
     <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
       <div className="container py-5">
