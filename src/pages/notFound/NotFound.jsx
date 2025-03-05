@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
+    <>
+    <PageRouteBanner PageName="Not-Found-404"/>
     <div className="container-fluid py-5" style={{marginTop: "120px"}}>
       <div className="container py-5 text-center">
         <div className="row justify-content-center">
@@ -23,6 +25,7 @@ const NotFound = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
