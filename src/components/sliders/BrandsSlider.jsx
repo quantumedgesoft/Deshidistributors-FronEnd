@@ -10,7 +10,7 @@ export default function BrandsSlider() {
 
   return (
     <div className="container my-5">
-      <h1>Our Partners</h1>
+      <h1>Brands</h1>
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
@@ -31,7 +31,7 @@ export default function BrandsSlider() {
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 10,
           },
         }}
@@ -42,17 +42,16 @@ export default function BrandsSlider() {
         {data?.map((item) => (
           <SwiperSlide key={item.id}>
             <div
-              className="vesitable-item rounded position-relative overflow-hidden"
-              style={{ maxHeight: "60px" }}
+              className="BrandsSliderCont rounded position-relative overflow-hidden"
+              style={{ maxHeight: "120px" }}
             >
               <div
-                className="product-image"
+                className="BrandsSlider"
                 style={{
                   backgroundImage: `url(${item?.logo})`,
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundOrigin: "center",
-                  minHeight: "60px",
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>

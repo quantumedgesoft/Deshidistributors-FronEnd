@@ -1,20 +1,25 @@
-import "bootstrap/dist/css/bootstrap.min.css"; // Make sure Bootstrap CSS is imported
-import DiscountSlider from "../../components/sliders/DiscountSlider";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useParams } from "react-router";
+import useDataFetcher from "../../utils/FetchDatas";
+import Loader from "../../utils/loader/Loader";
+import RelatedProductSlider from "../../components/sliders/RelatedProductSlider";
 
 const ProductDetails = () => {
-  // const [mainImage, setMainImage] = useState("/img/products/Edible Oil.jpg");
+  const { id } = useParams();
+  const { data, isLoading } = useDataFetcher(`/product/products/${id}`);
 
-  // Thumbnails data
-  // const thumbnails = [
-  //   "/img/products/Biscuit.jpg",
-  //   "/img/products/Chanachur.png",
-  //   "/img/products/Dates.png",
-  //   "/img/products/Ghee.png",
-  // ];
+  console.log(data);
 
-  // const changeImage = (src) => {
-  //   setMainImage(src);
-  // };
+  if (isLoading) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ width: "100vw", height: "100vh" }}
+      >
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-5">
@@ -23,30 +28,16 @@ const ProductDetails = () => {
           {/* Product Images */}
           <div className="col-md-6 mb-4">
             <img
-              src="/img/products/Edible Oil.jpg"
+              src={data?.image}
               alt="Product"
               className="img-fluid rounded mb-3 w-100 product-image"
               id="mainImage"
             />
-            {/* <div className="d-flex justify-content-between px-lg-5">
-              {thumbnails.map((src, index) => (
-                <img
-                  key={index}
-                  src={src}
-                  alt={`Thumbnail ${index + 1}`}
-                  className={`thumbnail rounded ${
-                    mainImage === src ? "active" : ""
-                  }`}
-                  onClick={() => changeImage(src)}
-                  style={{ cursor: "pointer" }}
-                />
-              ))}
-            </div> */}
           </div>
 
           {/* Product Details */}
           <div className="col-md-6">
-            <h2 className="mb-3 text-primary">Kolam Rice</h2>
+            <h2 className="mb-3 text-primary">{data?.title}</h2>
 
             <div className="mb-3">
               <i className="bi bi-star-fill text-warning"></i>
@@ -56,18 +47,9 @@ const ProductDetails = () => {
               <i className="bi bi-star-half text-warning"></i>
               <span className="ms-2">4.5 (120 reviews)</span>
             </div>
-            <p className="mb-4">
-              Kolam rice, also known as Lachkari Raw Rice, is a variety of rice
-              that is immensely popular in South India. It is known mainly due
-              to its excellent taste, uniform size, and high nutritious values.
-              It is organically harvested from rich Indian paddy fields and is a
-              perfect substitute for Basmati rice in Biryanis. Authentic Kolam
-              rice imparts a beautiful flowery smell when cooked – it is grainy,
-              spongy, and easily digested. And its silky smooth texture makes it
-              perfect for a wide variety of Indian Dishes.
-            </p>
+            <p className="mb-4">{data?.details}</p>
             <div className="mb-4 d-flex align-items-center gap-2">
-              <h5>Color:</h5>
+              <h5>Size:</h5>
               <h6 className="d-flex align-items-center gap-4 text-primary">
                 1kg, 2kg, 5kg
               </h6>
@@ -102,11 +84,13 @@ const ProductDetails = () => {
           {/* Related Products */}
           <section className="my-5">
             <div className="d-flex justify-content-center align-items-center">
-              <div className="bg-primary w-100" style={{ height:"2px"}}></div>
-              <h2 className="mb-3 text-primary text-center py-5 w-100 fs-2">Related Products</h2>
-              <div className="bg-primary w-100" style={{ height:"2px"}}></div>
+              <div className="bg-primary w-100" style={{ height: "2px" }}></div>
+              <h2 className="mb-3 text-primary text-center py-5 w-100 fs-2">
+                Related Products
+              </h2>
+              <div className="bg-primary w-100" style={{ height: "2px" }}></div>
             </div>
-              <DiscountSlider />
+            <RelatedProductSlider slug={data?.category?.slug}/>
           </section>
         </div>
       </div>

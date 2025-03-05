@@ -107,7 +107,10 @@ const Products = () => {
   ];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, [pathname]);
 
   return (
@@ -173,7 +176,11 @@ const Products = () => {
                 <div className="col-lg-12">
                   <div className="row g-4">
                     {products.map((item) => (
-                      <Link to={`/product-details/${item.id}`} key={item.id} className="col-md-6 col-lg-4 col-xl-3">
+                      <Link
+                        to={`/product-details/${item.id}`}
+                        key={item.id}
+                        className="col-md-6 col-lg-4 col-xl-3"
+                      >
                         <div className="rounded position-relative fruite-item overflow-hidden border border-secondary">
                           <div className="fruite-img">
                             <img
@@ -196,7 +203,9 @@ const Products = () => {
 
                           <div className="p-4 rounded-bottom">
                             <h4>{item.title}</h4>
-                            <p className="text-dark">{item.description?.slice(0, 100)}...</p>
+                            <p className="text-dark">
+                              {item.description?.slice(0, 100)}...
+                            </p>
                           </div>
                         </div>
                       </Link>
