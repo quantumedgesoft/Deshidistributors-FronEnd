@@ -4,7 +4,7 @@ import logo from "../../assets/Images/deshidistributors_logo.png";
 import useDataFetcher from "../../utils/FetchDatas";
 
 const Navbar = () => {
-  const {data} = useDataFetcher("/site-content/");
+  const { data } = useDataFetcher("/site-content/");
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "About", link: "/about" },
@@ -69,7 +69,7 @@ const Navbar = () => {
             </button>
 
             <div
-              className="collapse navbar-collapse bg-white"
+              className="collapse navbar-collapse bg-white mx-auto p-2"
               id="navbarCollapse"
             >
               <div className="navbar-nav mx-auto">
@@ -105,7 +105,7 @@ const Navbar = () => {
                     </div>
                   ) : (
                     <Link
-                    key={item.id}
+                      key={item.id}
                       to={item.link}
                       className="nav-item nav-link"
                     >

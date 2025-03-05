@@ -4,11 +4,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import useDataFetcher from "../../utils/FetchDatas";
+import CardLoader from "../../utils/CardLoader";
 
 export default function DiscountSlider() {
-  const { data } = useDataFetcher("/product/products/");
+  const { data, isLoading } = useDataFetcher("/product/products/");
 
   const filterted = data?.filter((item) => item?.tags?.title === "Comming");
+
+  if (isLoading) {
+    return <CardLoader />;
+  }
 
   return (
     <>

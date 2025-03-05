@@ -1,6 +1,11 @@
 import { Link } from "react-router";
+import useDataFetcher from "../../utils/FetchDatas";
 
 const BannerOne = () => {
+  const { data } = useDataFetcher("/ads-banner/");
+
+  console.log(data);
+
   return (
     <div className="container-fluid banner bg-secondary my-5">
       <div className="container py-5">
@@ -10,7 +15,10 @@ const BannerOne = () => {
               <h1 className="display-3 text-white">Fresh Daal</h1>
               <p className="fw-normal display-3 text-dark mb-4">in Our Store</p>
               <p className="mb-4 text-dark">
-              Enjoy the finest quality Fresh Daal, rich in protein and essential nutrients. Perfect for healthy and delicious meals, our daal is sourced from premium farms to ensure purity and taste. Shop now for the best selection!
+                Enjoy the finest quality Fresh Daal, rich in protein and
+                essential nutrients. Perfect for healthy and delicious meals,
+                our daal is sourced from premium farms to ensure purity and
+                taste. Shop now for the best selection!
               </p>
               <Link
                 to="/products"
@@ -45,7 +53,7 @@ const BannerOne = () => {
               </div>
 
               <div
-              id="circleAnim"
+                id="circleAnim"
                 className="position-absolute"
                 style={{
                   width: "140px",
