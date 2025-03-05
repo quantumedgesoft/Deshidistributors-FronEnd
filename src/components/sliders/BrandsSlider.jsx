@@ -6,7 +6,41 @@ import { Autoplay } from "swiper/modules";
 import useDataFetcher from "../../utils/FetchDatas";
 
 export default function BrandsSlider() {
-  const { data } = useDataFetcher("/our-partner/");
+  const { data, isLoading } = useDataFetcher("/our-partner/");
+
+  if (isLoading) {
+    return (
+      <div
+        className="d-flex gap-5 container my-5"
+        style={{ maxHeight: "120px", paddingTop:"70px" }}
+      >
+        <div
+          className="BrandsSlider w-100"
+          style={{ height: "120px", background: "#888585" }}
+        >
+          1
+        </div>
+        <div
+          className="BrandsSlider w-100"
+          style={{ height: "120px", background: "#888585" }}
+        >
+          1
+        </div>
+        <div
+          className="BrandsSlider w-100"
+          style={{ height: "120px", background: "#888585" }}
+        >
+          1
+        </div>
+        <div
+          className="BrandsSlider w-100"
+          style={{ height: "120px", background: "#888585" }}
+        >
+          1
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container my-5">

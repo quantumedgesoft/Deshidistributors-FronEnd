@@ -31,13 +31,18 @@ const OurProduccts = () => {
     },
   ];
 
-  const filtered = data?.filter(
-    (item) => item?.tags?.title.toLowerCase() === (filter === "all" ? ["popular", "best sale", "recent"] : filter)
-  );
+  const filtered = data?.filter((item) => {
+    if (!item?.tags?.title) return false;
 
-console.log(filtered);
+    const title = item.tags.title.toLowerCase();
+    const filterValue = filter.toLowerCase();
 
-  const filteredProducts = filter === "all" ? data : filtered;
+    if (filterValue === "all") {
+      return ["popular", "best sale", "recent"].includes(title);
+    } else {
+      return title === filterValue;
+    }
+  });
 
   return (
     <div className="container-flui fruite py-5">
@@ -88,7 +93,7 @@ console.log(filtered);
                     {isLoading ? (
                       <CardLoader />
                     ) : (
-                      filteredProducts?.map((item) => (
+                      filtered?.map((item) => (
                         <Link
                           to={`/product-details/${item?.id}`}
                           key={item.id}

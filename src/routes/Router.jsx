@@ -8,6 +8,7 @@ import TermsOfUse from "../pages/termsOfUse/TermsOfUse";
 import Products from "../pages/products/Products";
 import Category from "../pages/category/Category";
 import ProductDetails from "../pages/products/ProductDetails";
+import NotFound from "../pages/notFound/NotFound";
 
 const Router = () => {
   return (
@@ -21,10 +22,11 @@ const Router = () => {
         <Route path="/products/:string" element={<Category />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
 
-     
-
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+
+        {/* Catch-all 404 Route */}
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

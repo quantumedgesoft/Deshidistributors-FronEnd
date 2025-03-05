@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
 import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
+import useDataFetcher from "../../utils/FetchDatas";
 
 const Contact = () => {
+  const { data } = useDataFetcher("/site-content/");
+
   const {
     register,
     handleSubmit,
@@ -23,9 +26,12 @@ const Contact = () => {
             <div className="row g-4">
               {/* Office Location */}
               <div className="col-12">
-                <div className="text-center mx-auto" style={{ maxWidth: "700px" }}>
+                <div
+                  className="text-center mx-auto"
+                  style={{ maxWidth: "700px" }}
+                >
                   <h1 className="fw-bold">Office Location</h1>
-                  <p className="mb-4">Denver, Colorado, USA</p>
+                  <p className="mb-4">{data?.address}</p>
                 </div>
               </div>
 
@@ -44,7 +50,10 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div className="col-lg-7">
-                <form onSubmit={handleSubmit(onSubmit)} className="needs-validation">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="needs-validation"
+                >
                   {/* Name */}
                   <div className="mb-3">
                     <input
@@ -56,7 +65,9 @@ const Contact = () => {
                       {...register("name", { required: "Name is required" })}
                     />
                     {errors.name && (
-                      <div className="invalid-feedback">{errors.name.message}</div>
+                      <div className="invalid-feedback">
+                        {errors.name.message}
+                      </div>
                     )}
                   </div>
 
@@ -71,13 +82,16 @@ const Contact = () => {
                       {...register("email", {
                         required: "Email is required",
                         pattern: {
-                          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                          value:
+                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
                           message: "Enter a valid email",
                         },
                       })}
                     />
                     {errors.email && (
-                      <div className="invalid-feedback">{errors.email.message}</div>
+                      <div className="invalid-feedback">
+                        {errors.email.message}
+                      </div>
                     )}
                   </div>
 
@@ -89,10 +103,14 @@ const Contact = () => {
                       }`}
                       rows="5"
                       placeholder="Your Message"
-                      {...register("message", { required: "Message cannot be empty" })}
+                      {...register("message", {
+                        required: "Message cannot be empty",
+                      })}
                     ></textarea>
                     {errors.message && (
-                      <div className="invalid-feedback">{errors.message.message}</div>
+                      <div className="invalid-feedback">
+                        {errors.message.message}
+                      </div>
                     )}
                   </div>
 
@@ -112,21 +130,21 @@ const Contact = () => {
                   <i className="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
                   <div>
                     <h5>Address</h5>
-                    <p className="mb-2">Denver, Colorado, USA</p>
+                    <p className="mb-2">{data?.data?.address}</p>
                   </div>
                 </div>
                 <div className="d-flex p-4 rounded mb-4 bg-white shadow-sm">
                   <i className="fas fa-envelope fa-2x text-primary me-4"></i>
                   <div>
                     <h5>Email</h5>
-                    <p className="mb-2">info@Deshidistributors.com</p>
+                    <p className="mb-2">{data?.data?.email}</p>
                   </div>
                 </div>
                 <div className="d-flex p-4 rounded bg-white shadow-sm">
                   <i className="fa fa-phone-alt fa-2x text-primary me-4"></i>
                   <div>
                     <h5>Phone</h5>
-                    <p className="mb-2">(+012) 3456 7890</p>
+                    <p className="mb-2">{data?.data?.phone}</p>
                   </div>
                 </div>
               </div>
