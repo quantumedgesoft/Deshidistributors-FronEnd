@@ -7,11 +7,20 @@ import useDataFetcher from "../../utils/FetchDatas";
 
 export default function HeroSlider() {
   const { data, isLoading } = useDataFetcher("/sliders/");
+  if (isLoading) {
+    return (
+      <div
+        className="rounded"
+        style={{ height: "280px", backgroundColor: "gray" }}
+      ></div>
+    );
+  }
 
   return (
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
+      F
       loop={true}
       autoplay={{
         delay: 2500,
@@ -24,12 +33,7 @@ export default function HeroSlider() {
     >
       {data?.map((item) => (
         <SwiperSlide key={item?.id}>
-          {isLoading ? (
-            <div
-              className="rounded"
-              style={{ height: "280px", backgroundColor: "gray" }}
-            ></div>
-          ) : (
+          {
             <div
               className="active rounded overflow-hidden"
               style={{
@@ -56,7 +60,7 @@ export default function HeroSlider() {
                 {item.name}
               </a>
             </div>
-          )}
+          }
         </SwiperSlide>
       ))}
     </Swiper>
