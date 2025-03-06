@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Topbar from "./Topbar";
 import logo from "../../assets/Images/deshidistributors_logo.png";
 import useDataFetcher from "../../utils/FetchDatas";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const { data } = useDataFetcher("/site-content/");
-  
+  const location = useLocation();
+
+
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "About", link: "/about" },
@@ -43,6 +46,15 @@ const Navbar = () => {
     { id: 5, name: "Operation Map", link: "/contact" },
     { id: 6, name: "Career", link: "/career" },
   ];
+
+  useEffect(() => {
+    // Close navbar on route change
+    const navbarCollapse = document.getElementById("navbarCollapse");
+    if (navbarCollapse) {
+      navbarCollapse.classList.remove("show");
+    }
+  }, [location]); // Runs every time the route changes
+
 
   return (
     <>

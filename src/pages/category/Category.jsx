@@ -1,10 +1,12 @@
 import { Link, useLocation } from "react-router";
 import PageRouteBanner from "../../components/shared/pageRouteBanner/PageRouteBanner";
 import { useEffect } from "react";
+import useDataFetcher from "../../utils/FetchDatas";
 
 const Products = () => {
   const { pathname } = useLocation();
-
+  const { data, isLoading } = useDataFetcher("/product/products/");
+  console.log(data)
   const category = pathname?.split("/")[2];
 
   const products = [
@@ -106,6 +108,12 @@ const Products = () => {
     },
   ];
 
+  const filteredProducts = data.filter((item) => {
+    item?.category?.title?.toLowerCase() === category.toLowerCase();
+  });
+
+  console.log(filteredProducts);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -128,46 +136,6 @@ const Products = () => {
         </div>
       </div>
 
-      {/* <div className="container">
-        <div className="row g-4">
-          <div className="col-lg-12">
-            <div className="row g-4">
-              {products.map((item) => (
-                <Link
-                  to={`/product-details/${item.id}`}
-                  key={item.id}
-                  className="col-md-6 col-lg-4 col-xl-3"
-                >
-                  <div
-                    className="border border-primary rounded position-relative vesitable-item"
-                    style={{ maxHeight: "450px", minHeight: "450px" }}
-                  >
-                    <div className="vesitable-img">
-                      <img
-                        src={item.img}
-                        className="img-fluid w-100 rounded-top"
-                        style={{ maxHeight: "250px", minHeight: "250px" }}
-                        alt=""
-                      />
-                    </div>
-                    <div
-                      className="text-white bg-primary px-3 py-1 rounded position-absolute"
-                      style={{ top: "10px", right: "10px" }}
-                    >
-                      Latest
-                    </div>
-                    <div className="p-4 rounded-bottom text-gray">
-                      <h4>{item.title}</h4>
-                      <p className="text-dark text-justify">{item.description?.slice(0, 100)}...</p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="container fruite pb-5">
         <div className="tab-class">
           <div className="tab-content">
@@ -175,7 +143,7 @@ const Products = () => {
               <div className="row g-4">
                 <div className="col-lg-12">
                   <div className="row g-4">
-                    {products.map((item) => (
+                    {filteredProducts?.map((item) => (
                       <Link
                         to={`/product-details/${item.id}`}
                         key={item.id}

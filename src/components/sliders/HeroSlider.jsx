@@ -20,7 +20,6 @@ export default function HeroSlider() {
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
-      F
       loop={true}
       autoplay={{
         delay: 2500,
