@@ -12,7 +12,7 @@ const FeaturesCategory = () => {
               <div className="featurs-item rounded bg-light p-4 text-center">
                 <div className="featurs-icon btn-square rounded-circle bg-secondary mb-4 mx-auto">
                   <i
-                    className={`fa ${featureReview?.icon} fa-2x text-white`}
+                    className={`fa ${featureReview?.icon} fa-2x text-white`} 
                   ></i>
                 </div>
                 <div className="featurs-content text-left">

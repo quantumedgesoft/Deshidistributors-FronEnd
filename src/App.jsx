@@ -29,7 +29,7 @@ const App = () => {
     <>
       <WhatcAppBtn />
       <ScrollToTopButton />
-      <PrimaryLayout />;
+      <PrimaryLayout />
     </>
   );
 };

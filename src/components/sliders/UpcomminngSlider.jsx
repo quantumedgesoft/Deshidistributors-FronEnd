@@ -6,10 +6,11 @@ import { Autoplay } from "swiper/modules";
 import useDataFetcher from "../../utils/FetchDatas";
 import CardLoader from "../../utils/CardLoader";
 
-export default function DiscountSlider() {
+export default function UpcommingSlider() {
   const { data, isLoading } = useDataFetcher("/product/products/");
+  console.log(data)
 
-  const filterted = data?.filter((item) => item?.tags?.title === "Comming");
+  const filterted = data?.filter((item) => item?.product_type === "Upcomming");
 
   if (isLoading) {
     return <CardLoader />;
@@ -49,7 +50,7 @@ export default function DiscountSlider() {
           <SwiperSlide key={item.id}>
             <div
               className="border border-primary rounded position-relative vesitable-item"
-              style={{ maxHeight: "450px", minHeight: "450px" }}
+              style={{ maxHeight: "400px", minHeight: "400px" }}
             >
               <div className="vesitable-img">
                 <img
@@ -63,11 +64,10 @@ export default function DiscountSlider() {
                 className="text-white bg-primary px-3 py-1 rounded position-absolute"
                 style={{ top: "10px", right: "10px" }}
               >
-                {item?.tags?.title}
+                {item?.product_type}
               </div>
               <div className="p-4 rounded-bottom">
                 <h4>{item?.title}</h4>
-                {/* <p>{item?.short_description?.slice(0, 100)}...</p> */}
               </div>
             </div>
           </SwiperSlide>
