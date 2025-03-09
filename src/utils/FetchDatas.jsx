@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { BASE_URL } from "../components/config/Config";
 
 // Generalized data fetching hook
-function useDataFetcher(endpoint) {
+function useDataFetcher({ endpoint, param }) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,8 +11,15 @@ function useDataFetcher(endpoint) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`${BASE_URL}${endpoint}`);
-        setData(response?.data?.results || response?.data);
+        if (param === true) {
+          const response = await axios.get(
+            `${BASE_URL}${endpoint}/?all=${param}`
+          );
+          setData(response?.data?.results || response?.data);
+        } if(param === false) {
+          const response = await axios.get(`${BASE_URL}${endpoint}`);
+          setData(response?.data?.results || response?.data);
+        }
       } catch (error) {
         setError(error);
         console.error(error);

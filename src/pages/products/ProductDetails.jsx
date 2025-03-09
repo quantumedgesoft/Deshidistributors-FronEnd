@@ -1,14 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import useDataFetcher from "../../utils/FetchDatas";
 import Loader from "../../utils/loader/Loader";
 import RelatedProductSlider from "../../components/sliders/RelatedProductSlider";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { data, isLoading } = useDataFetcher(`/product/products/${id}`);
+  const endpoint = `/product/products/${id}`;
+  const param = false;
+  const { data, isLoading } = useDataFetcher({ endpoint, param });
+  const { data: siteContent } = useDataFetcher({
+    endpoint: "/site-content/",
+    param: false,
+  });
 
-  console.log(data);
+  console.log(siteContent?.data?.facebook);
 
   if (isLoading) {
     return (
@@ -30,8 +36,8 @@ const ProductDetails = () => {
             <img
               src={data?.image}
               alt="Product"
-              className="img-fluid rounded mb-3 w-100 product-image"
-              id="mainImage"
+              className="rounded mb-3 product-image border w-100"
+              style={{ maxHeight: "400px", objectFit: "cover" }}
             />
           </div>
 
@@ -45,38 +51,39 @@ const ProductDetails = () => {
               <i className="bi bi-star-fill text-warning"></i>
               <i className="bi bi-star-fill text-warning"></i>
               <i className="bi bi-star-half text-warning"></i>
-              <span className="ms-2">4.5 (120 reviews)</span>
+              <span className="ms-2">
+                {data?.rating} ({data?.total_review} reviews)
+              </span>
             </div>
             <p className="mb-4">{data?.details}</p>
             <div className="mb-4 d-flex align-items-center gap-2">
-              <h5>Size:</h5>
+              <h5>Quantity:</h5>
               <h6 className="d-flex align-items-center gap-4 text-primary">
-                1kg, 2kg, 5kg
+                {data?.weight}
               </h6>
             </div>
 
             <div className="mt-4 h-100">
               <h5>Buy Now Online:</h5>
 
-              <div className="availbleStore d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-4 overflow-hidden">
-                <img
-                  src="https://sarojagro.com/wp-content/uploads/2020/08/Amazon-Logo.jpg"
-                  alt="Product"
-                  className=""
-                  style={{ maxWidth: "120px", height: "100%" }}
-                />
-                <img
-                  src="https://sarojagro.com/wp-content/uploads/2020/08/Flipkart-Logo.jpg"
-                  alt="Product"
-                  className=""
-                  style={{ maxWidth: "120px", height: "100%" }}
-                />
-                <img
-                  src="https://sarojagro.com/wp-content/uploads/2020/08/Alibaba-Logo.jpg"
-                  alt="Product"
-                  className=""
-                  style={{ maxWidth: "120px", height: "100%" }}
-                />
+              <div className="availbleStore d-flex flex-column flex-lg-row align-items-center gap-3 gap-lg-5 overflow-hidden">
+                <Link to="https://deshidistributors.com/">
+                  <img
+                    src="/img/deshidistributors_logo.png"
+                    alt="Product"
+                    className=""
+                    style={{ maxWidth: "100px", height: "70px" }}
+                  />
+                </Link>
+
+                <Link to={siteContent?.data?.facebook} target="_blank">
+                  <img
+                    src="/img/others/facebook.webp"
+                    alt="Product"
+                    className=""
+                    style={{ maxWidth: "60px", height: "60px" }}
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -90,7 +97,7 @@ const ProductDetails = () => {
               </h2>
               <div className="bg-primary w-100" style={{ height: "2px" }}></div>
             </div>
-            <RelatedProductSlider slug={data?.category?.slug}/>
+            <RelatedProductSlider slug={data?.category?.slug} />
           </section>
         </div>
       </div>

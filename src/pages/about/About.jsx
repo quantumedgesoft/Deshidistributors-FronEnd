@@ -5,7 +5,9 @@ import { useEffect } from "react";
 
 const About = () => {
   const { pathname } = useLocation();
-  const { data } = useDataFetcher("/team/");
+  const endpoint = "/team/";
+  const param = false;
+  const { data } = useDataFetcher({ endpoint, param });
 
   useEffect(() => {
     window.scrollTo({

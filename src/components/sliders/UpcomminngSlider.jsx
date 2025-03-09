@@ -7,8 +7,9 @@ import useDataFetcher from "../../utils/FetchDatas";
 import CardLoader from "../../utils/CardLoader";
 
 export default function UpcommingSlider() {
-  const { data, isLoading } = useDataFetcher("/product/products/");
-  console.log(data)
+  const endpoint = "/product/products/";
+  const param = false;
+  const { data, isLoading } = useDataFetcher({endpoint, param});
 
   const filterted = data?.filter((item) => item?.product_type === "Upcomming");
 

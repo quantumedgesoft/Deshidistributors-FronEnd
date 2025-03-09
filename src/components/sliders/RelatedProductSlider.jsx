@@ -9,9 +9,11 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router";
 
 export default function RelatedProductSlider({ slug }) {
+  const endpoint = "/product/products/";
+  const param = false;
   const { pathname } = useLocation();
 
-  const { data } = useDataFetcher("/product/products/");
+  const { data } = useDataFetcher({ endpoint, param });
   const filterted = data?.filter((item) => item?.category?.slug === slug);
 
   useEffect(() => {
@@ -20,6 +22,10 @@ export default function RelatedProductSlider({ slug }) {
       behavior: "smooth",
     });
   }, [pathname]);
+
+  if (filterted?.length <= 0) {
+    return <p className="text-center">No related products</p>;
+  }
 
   return (
     <>

@@ -5,7 +5,9 @@ import ScrollToTopButton from "./utils/ScrollToTopButton";
 import WhatcAppBtn from "./utils/WhatcAppBtn";
 
 const App = () => {
-  const { isLoading } = useDataFetcher("/product/products/");
+  const endpoint = "/product/products/";
+  const param = false;
+  const { isLoading } = useDataFetcher({endpoint, param});
 
   if (isLoading) {
     return (

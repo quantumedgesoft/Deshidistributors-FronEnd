@@ -4,9 +4,11 @@ import { Link } from "react-router";
 import CardLoader from "../../utils/CardLoader";
 
 const OurProduccts = () => {
+  const endpoint = "/product/products/";
+  const param = false;
   const [filter, setFilter] = useState("all");
 
-  const { data, isLoading } = useDataFetcher("/product/products/");
+  const { data, isLoading } = useDataFetcher( {endpoint, param});
 
   const menus = [
     {

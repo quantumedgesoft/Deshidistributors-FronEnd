@@ -2,7 +2,10 @@ import { Link } from "react-router";
 import useDataFetcher from "../../utils/FetchDatas";
 
 const BannerOne = () => {
-  const { data } = useDataFetcher("/ads-banner/");
+  const endpoint = "/ads-banner/";
+  const param = false;
+
+  const { data } = useDataFetcher({ endpoint, param });
 
   return (
     <div className="container-fluid banner bg-secondary my-5">

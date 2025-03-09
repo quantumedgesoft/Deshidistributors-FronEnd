@@ -2,7 +2,10 @@ import { Link } from "react-router"
 import useDataFetcher from "../../utils/FetchDatas";
 
 const Topbar = () => {
-  const {data} = useDataFetcher("/site-content/");
+  const endpoint = "/site-content/";
+  const param = false;
+
+  const {data} = useDataFetcher({endpoint, param});
   return (
     <div className="container topbar bg-primary d-none d-lg-block">
           <div className="d-flex justify-content-between">

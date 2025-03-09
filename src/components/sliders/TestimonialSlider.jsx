@@ -6,8 +6,10 @@ import { Autoplay } from "swiper/modules";
 import useDataFetcher from "../../utils/FetchDatas";
 
 export default function TestimonialSlider() {
-  const { data } = useDataFetcher("/our-testimonials/");
-  
+  const endpoint = "/our-testimonials/";
+  const param = false;
+  const { data } = useDataFetcher({ endpoint, param });
+
   return (
     <>
       <Swiper
