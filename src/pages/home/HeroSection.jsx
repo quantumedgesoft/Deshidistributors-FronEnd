@@ -1,7 +1,9 @@
 import HeroSlider from "../../components/sliders/HeroSlider";
 import useDataFetcher from "../../utils/FetchDatas";
 const HeroSection = () => {
-  const { data, isLoading } = useDataFetcher("/site-content/");
+  const endpoint = "/site-content/";
+  const param = false;
+  const { data, isLoading } = useDataFetcher({endpoint, param});
 
   return (
     <section className="container-fluid py-5 mb- hero-header">

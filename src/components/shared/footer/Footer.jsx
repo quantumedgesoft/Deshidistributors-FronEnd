@@ -1,9 +1,15 @@
 import { Link } from "react-router";
 import useDataFetcher from "../../../utils/FetchDatas";
 const Footer = () => {
-  const {data} = useDataFetcher("/site-content/");
+  const endpoint = "/site-content/";
+  const param = false;
+  const { data } = useDataFetcher({ endpoint, param });
+
   return (
-    <div className="container-fluid text-white-50 footer pt-5 mt-5" style={{backgroundColor: "#000"}}>
+    <div
+      className="container-fluid text-white-50 footer pt-5 mt-5"
+      style={{ backgroundColor: "#000" }}
+    >
       <div className="container py-5">
         <div
           className="pb-4 mb-4"
@@ -12,7 +18,7 @@ const Footer = () => {
           <div className="row g-4">
             <div className="col-lg-3">
               <a href="#">
-                  <img className="w-50" src="/img/logo_light.png" alt="logo" />
+                <img className="w-50" src="/img/logo_light.png" alt="logo" />
               </a>
             </div>
             <div className="col-lg-6">
@@ -25,7 +31,7 @@ const Footer = () => {
                 <button
                   type="submit"
                   className="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white"
-                  style={{top: "0", right: "0"}}
+                  style={{ top: "0", right: "0" }}
                 >
                   Subscribe Now
                 </button>
@@ -33,7 +39,6 @@ const Footer = () => {
             </div>
             <div className="col-lg-3">
               <div className="d-flex justify-content-end pt-3">
-
                 <Link
                   className="border border-primary btn-outline-primary me-2 btn-md-square rounded-circle"
                   to={data?.data?.linkedin}
@@ -73,8 +78,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
               <h4 className="text-light mb-3">Why People Like us!</h4>
-              <p className="mb-4">{data?.data?.company_details}
-              </p>
+              <p className="mb-4">{data?.data?.company_details}</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -101,19 +105,19 @@ const Footer = () => {
             <div className="d-flex flex-column text-start footer-item">
               <h4 className="text-light mb-3">Popular Service</h4>
               <Link className="btn-link" to="/products">
-              Rice
+                Rice
               </Link>
               <Link className="btn-link" to="/products">
-              Spices & Herbs
+                Spices & Herbs
               </Link>
               <Link className="btn-link" to="/products">
-              Tea, Coffee, Milk Drinks
+                Tea, Coffee, Milk Drinks
               </Link>
               <Link className="btn-link" to="/products">
-              Healthcare & Beauty
+                Healthcare & Beauty
               </Link>
               <Link className="btn-link" to="/products">
-              Miscellaneous
+                Miscellaneous
               </Link>
             </div>
           </div>

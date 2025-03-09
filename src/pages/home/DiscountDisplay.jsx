@@ -2,7 +2,10 @@ import { Link } from "react-router";
 import useDataFetcher from "../../utils/FetchDatas";
 
 const DiscountDisplay = () => {
-  const { data } = useDataFetcher("/discount-cards/");
+  const endpoint = "/discount-cards/";
+  const param = false;
+  const { data } = useDataFetcher({ endpoint, param });
+  
   return (
     <div className="container-flui service py-">
       <div className="container py-5">

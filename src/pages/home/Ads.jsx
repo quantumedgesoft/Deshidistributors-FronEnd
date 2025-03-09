@@ -1,6 +1,10 @@
 import useDataFetcher from "./../../utils/FetchDatas";
+
 const Ads = () => {
-  const { data } = useDataFetcher("/site-content/");
+  const endpoint = "/site-content/";
+  const param = false;
+  const { data } = useDataFetcher({endpoint, param});
+
   return (
     <div className="container my-5">
       <div className="video-container rounded overflow-hidden shadow-lg border p-2 shadow mx-auto">

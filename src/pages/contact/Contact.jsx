@@ -5,7 +5,10 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 
 const Contact = () => {
-  const { data } = useDataFetcher("/site-content/");
+  const endpoint = "/site-content/";
+  const param = false;
+
+  const { data } = useDataFetcher({ endpoint, param });
   const { pathname } = useLocation();
 
   const {

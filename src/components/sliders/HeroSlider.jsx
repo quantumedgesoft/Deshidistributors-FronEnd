@@ -6,7 +6,9 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import useDataFetcher from "../../utils/FetchDatas";
 
 export default function HeroSlider() {
-  const { data, isLoading } = useDataFetcher("/sliders/");
+  const endpoint = "/sliders/";
+  const param = false;
+  const { data, isLoading } = useDataFetcher( {endpoint, param});
   if (isLoading) {
     return (
       <div

@@ -5,7 +5,10 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import useDataFetcher from "../../utils/FetchDatas";
 
 const FactsSection = () => {
-  const { data } = useDataFetcher("/site-content/");
+  const endpoint = "/site-content/";
+  const param = false;
+  const { data } = useDataFetcher({ endpoint, param });
+
   const facts = [
     {
       id: 1,

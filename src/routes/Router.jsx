@@ -6,7 +6,6 @@ import Contact from "../pages/contact/Contact";
 import PrivacyAndPolicy from "../pages/privacy_policy/PrivacyAndPolicy";
 import TermsOfUse from "../pages/termsOfUse/TermsOfUse";
 import Products from "../pages/products/Products";
-import Category from "../pages/category/Category";
 import ProductDetails from "../pages/products/ProductDetails";
 import NotFound from "../pages/notFound/NotFound";
 import Career from "../pages/career/Career";
@@ -22,8 +21,7 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:string" element={<Category />} />
+        <Route path="/products/:string" element={<Products />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
 
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />

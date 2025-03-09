@@ -5,9 +5,11 @@ import useDataFetcher from "../../utils/FetchDatas";
 import { useEffect } from "react";
 
 const Navbar = () => {
-  const { data } = useDataFetcher("/site-content/");
-  const location = useLocation();
+  const endpoint = "/site-content/";
+  const param = false;
 
+  const { data } = useDataFetcher({ endpoint, param });
+  const location = useLocation();
 
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
@@ -18,6 +20,7 @@ const Navbar = () => {
       link: "/products",
       dropdown: true,
       categories: [
+        "All Products",
         "Snacks",
         "Pickle",
         "Miscellaneous",
@@ -54,7 +57,6 @@ const Navbar = () => {
       navbarCollapse.classList.remove("show");
     }
   }, [location]); // Runs every time the route changes
-
 
   return (
     <>
@@ -100,9 +102,9 @@ const Navbar = () => {
                         className="dropdown-menu m-0 bg-secondary rounded-0 overflow-auto"
                         style={{ maxHeight: "40vh" }}
                       >
-                        <Link to={item.link} className="dropdown-item">
+                        {/* <Link to={item.link} className="dropdown-item">
                           All Products
-                        </Link>
+                        </Link> */}
                         {item.categories.map((category, catIdx) => (
                           <Link
                             key={catIdx}

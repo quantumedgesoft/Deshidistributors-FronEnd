@@ -1,7 +1,9 @@
 import useDataFetcher from "../../utils/FetchDatas";
 
 const FeaturesCategory = () => {
-  const { data } = useDataFetcher("/cards-01/");
+  const endpoint = "/cards-01/";
+  const param = false;
+  const { data } = useDataFetcher({ endpoint, param });
 
   return (
     <div className="container-flui featurs">
@@ -12,7 +14,7 @@ const FeaturesCategory = () => {
               <div className="featurs-item rounded bg-light p-4 text-center">
                 <div className="featurs-icon btn-square rounded-circle bg-secondary mb-4 mx-auto">
                   <i
-                    className={`fa ${featureReview?.icon} fa-2x text-white`} 
+                    className={`fa ${featureReview?.icon} fa-2x text-white`}
                   ></i>
                 </div>
                 <div className="featurs-content text-left">
