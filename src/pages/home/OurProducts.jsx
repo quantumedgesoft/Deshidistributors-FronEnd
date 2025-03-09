@@ -8,7 +8,7 @@ const OurProduccts = () => {
   const param = false;
   const [filter, setFilter] = useState("all");
 
-  const { data, isLoading } = useDataFetcher( {endpoint, param});
+  const { data, isLoading } = useDataFetcher({ endpoint, param });
 
   const menus = [
     {
@@ -76,7 +76,7 @@ const OurProduccts = () => {
                 <li className="nav-item">
                   <Link
                     className="d-flex py-2 m-2 bg-light rounded-pill"
-                    to="/products"
+                    to="/products/all-products"
                   >
                     <span className="text-dark " style={{ width: "130px" }}>
                       See all
